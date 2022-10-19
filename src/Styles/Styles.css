@@ -18,4 +18,17 @@ body {
 
 .cursor {
   cursor: pointer;
+}
+
+.FooterLink {
+  color: #0000ee;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline;
+}
+
+.links h1 {
+  color: rgba(0, 0, 0, 0.7803921569);
 }/*# sourceMappingURL=Styles.css.map */

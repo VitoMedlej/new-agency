@@ -44,7 +44,7 @@ function Footer() {
             <Box
                 sx={{
                 width: '100%',
-                color: 'white',
+                color: 'black',
                 minHeight: '200px',
                 display: 'flex',
                 margin: '0 auto'
@@ -64,7 +64,7 @@ function Footer() {
                         <Typography variant='h1' fontSize='1.4em' fontWeight='400'>About</Typography>
 
                         <Box sx={styles}>
-                            <Typography variant='h3' fontSize='1em'>
+                            <Typography color='black' variant='h3' fontSize='1em'>
                                 Hi my name is Vito Medlej and I&lsquo;ve built this portfolio website to showcase my work and give clients and employers a way to reach me out and see my work. If you&lsquo;re a developer as well feel free to use this website as your own and good luck on your journey.
                             </Typography>
                         </Box>
@@ -89,7 +89,7 @@ function Footer() {
                     </Grid>
                     <Grid item xs={12} sm={3} md={3}>
                         <Typography variant='h1' fontSize='1.4em' fontWeight='400'>Contact</Typography>
-                        <Box className='link' sx={styles}>
+                        <Box className='links' sx={styles}>
                             <a target='_blank' rel="noreferrer" href='https://github.com/VitoMedlej'>Github</a>
                             <Typography variant='h1' fontSize='1em'>vito.medlej@gmail.com</Typography>
                             <Typography variant='h1' fontSize='1em'>Lebanon/beirut</Typography>
