@@ -5,21 +5,22 @@ const Navbar = ({isOpen, setOpen} : INavbar) => {
     return (
         <Box
             sx={{
-            background: 'black',
-            height: '40px',
             width: "100%"
         }}>
             <Box
                 sx={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'end',
                 height: '100%',
-                padding: '1em'
+                padding: '1em',
+                justifyContent:'space-between',
             }}
                 className="mw">
-                <Box>
-                    <DragHandle sx={{color:'black'}}/>
+                <Box className='center '>
+                    <Box sx={{background:'black',width:'2em',height:'2em'}}/>
+                </Box>
+                <Box className='center cursor'>
+                    <DragHandle sx={{color:'black',fontSize:'2em'}}/>
                 </Box>
             </Box>
         </Box>

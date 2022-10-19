@@ -8,3 +8,11 @@ body {
     max-width: 1300px;
     margin: 0 auto;
 }
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cursor {
+    cursor:pointer;
+}
