@@ -1,9 +1,10 @@
+import Hero from "../src/Components/HomeSections/Hero"
 import Layout from "../src/Layout/Layout"
 
 const index = () => {
   return (
     <Layout title='Hello world' description='hello'>
-      <h1>hello world v2</h1>
+        <Hero/>
     </Layout>
   )
 }

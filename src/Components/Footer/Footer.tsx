@@ -65,7 +65,8 @@ function Footer() {
 
                         <Box sx={styles}>
                             <Typography color='black' variant='h3' fontSize='1em'>
-                                Hi my name is Vito Medlej and I&lsquo;ve built this portfolio website to showcase my work and give clients and employers a way to reach me out and see my work. If you&lsquo;re a developer as well feel free to use this website as your own and good luck on your journey.
+                              
+                            We are a Web Development Agency and we are helping Businesses to grow. We provide a wide array of Services and quality work for the price of a pizza , Feel Free to Contact us Anytime.
                             </Typography>
                         </Box>
 

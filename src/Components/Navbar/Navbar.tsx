@@ -1,10 +1,12 @@
-import {Box} from '@mui/material'
+import {Box, Button, Typography} from '@mui/material'
 import {INavbar} from '../../Types'
 import {DragHandle} from '@mui/icons-material';
+
 const Navbar = ({isOpen, setOpen} : INavbar) => {
     return (
         <Box
             sx={{
+            boxShadow: '1px 1px 5px #00000012',
             width: "100%"
         }}>
             <Box
@@ -13,14 +15,28 @@ const Navbar = ({isOpen, setOpen} : INavbar) => {
                 alignItems: 'center',
                 height: '100%',
                 padding: '1em',
-                justifyContent:'space-between',
+                justifyContent: 'space-between'
             }}
                 className="mw">
-                <Box className='center '>
-                    <Box sx={{background:'black',width:'2em',height:'2em'}}/>
+                <Box sx={{width:'100px'}} className='center '>
+                    
+                     <img className='img' src="/bwa.JPG" alt="BWA logo" />
                 </Box>
-                <Box className='center cursor'>
-                    <DragHandle sx={{color:'black',fontSize:'2em'}}/>
+                <Box className='center '>
+                    <Button sx={{
+                        mx: '1em'
+                    }}>
+
+                        <Typography className='cursor' color='black'>
+                            العربية
+                        </Typography>
+                    </Button>
+                    <DragHandle
+                        className='cursor'
+                        sx={{
+                        color: 'black',
+                        fontSize: '2em'
+                    }}/>
                 </Box>
             </Box>
         </Box>

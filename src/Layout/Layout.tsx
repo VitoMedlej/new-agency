@@ -2,6 +2,7 @@ import {Box, Button, Drawer, IconButton} from "@mui/material";
 import Head from "next/head";
 import {useState} from "react";
 import Footer from "../Components/Footer/Footer";
+import Menu from "../Components/Navbar/Menu/Menu";
 import Navbar from "../Components/Navbar/Navbar";
 import {ILayout} from "../Types";
 
@@ -16,7 +17,7 @@ const Layout = ({title, children, description} : ILayout) => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link
                     rel="shortcut icon"
-                    href="https://res.cloudinary.com/dwcu3wcol/image/upload/v1657099811/log_nkmcys.jpg"/>
+                    href="https://res.cloudinary.com/dwcu3wcol/image/upload/v1666363512/logo_mdwklh.jpg"/>
 
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -76,6 +77,7 @@ const Layout = ({title, children, description} : ILayout) => {
 
                 </Box>
             </Drawer> */}
+            <Menu/>
             <Navbar isOpen={isOpen} setOpen={setOpen} />
             <> {children} </> 
             <Footer/>

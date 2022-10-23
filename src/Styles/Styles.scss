@@ -16,8 +16,11 @@ body {
 .cursor {
     cursor:pointer;
 }
+$clr : #6000a9;
+$trans : all .5s ease;
 .FooterLink {
     color : #0000ee;
+
     cursor:pointer;
     width:fit-content;
     text-decoration: underline;
@@ -26,4 +29,64 @@ body {
     h1 {
         color: #000000c7
     }
+}
+.clr {
+    color : $clr;
+}
+.btn {
+    // color:black;
+    font-weight: 600;
+    padding: .5em 2.5em;
+    transition: $trans;
+
+width:100%;    border:1px solid transparent;
+    border-radius: 0;
+}
+.b1 {
+    color : white;
+    border:1px solid $clr;
+
+    background:$clr;
+    &:hover {
+        color : $clr;
+    }
+}
+.b2 {
+    color : $clr;
+    border-color: $clr;
+    
+}
+.img {
+    width : 100%;
+    height: 100%;
+}
+.close-btn{
+    svg {
+
+        transition: all .2s ease-in; 
+    }
+}
+.menu-links {
+    flex-direction: column;
+         p {
+    transition : $trans;
+
+            font-size: 3.5em;
+            padding :  .11em 0;
+            font-weight: 600;
+            cursor:pointer;
+            color:white;
+            &:hover {
+                color : $clr;
+            }
+         }
+}
+.social-link{
+    color : rgb(174, 174, 174);
+}
+@media (min-width:568px) {
+        .btn {
+            width:158px !important;
+
+        }
 }

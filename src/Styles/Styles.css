@@ -31,4 +31,65 @@ body {
 
 .links h1 {
   color: rgba(0, 0, 0, 0.7803921569);
+}
+
+.clr {
+  color: #6000a9;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 0.5em 2.5em;
+  transition: all 0.5s ease;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.b1 {
+  color: white;
+  border: 1px solid #6000a9;
+  background: #6000a9;
+}
+.b1:hover {
+  color: #6000a9;
+}
+
+.b2 {
+  color: #6000a9;
+  border-color: #6000a9;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn svg {
+  transition: all 0.2s ease-in;
+}
+
+.menu-links {
+  flex-direction: column;
+}
+.menu-links p {
+  transition: all 0.5s ease;
+  font-size: 3.5em;
+  padding: 0.11em 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+.menu-links p:hover {
+  color: #6000a9;
+}
+
+.social-link {
+  color: rgb(174, 174, 174);
+}
+
+@media (min-width: 568px) {
+  .btn {
+    width: 158px !important;
+  }
 }/*# sourceMappingURL=Styles.css.map */
