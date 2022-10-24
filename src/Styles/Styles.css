@@ -74,9 +74,10 @@ body {
 }
 .menu-links p {
   transition: all 0.5s ease;
-  font-size: 3.5em;
-  padding: 0.11em 0;
-  font-weight: 600;
+  margin-left: 1em;
+  font-size: 3em;
+  padding: 0.25em 0;
+  font-weight: 800;
   cursor: pointer;
   color: white;
 }
@@ -84,8 +85,20 @@ body {
   color: #6000a9;
 }
 
-.social-link {
-  color: rgb(174, 174, 174);
+.phn {
+  color: rgb(204, 204, 204);
+}
+
+.fb {
+  color: #4771c4;
+}
+
+.ins {
+  color: #C13584;
+}
+
+.wts {
+  color: #25D366;
 }
 
 @media (min-width: 568px) {

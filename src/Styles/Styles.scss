@@ -70,10 +70,10 @@ width:100%;    border:1px solid transparent;
     flex-direction: column;
          p {
     transition : $trans;
-
-            font-size: 3.5em;
-            padding :  .11em 0;
-            font-weight: 600;
+            margin-left: 1em;
+            font-size: 3em;
+            padding :  .25em 0;
+            font-weight: 800;
             cursor:pointer;
             color:white;
             &:hover {
@@ -81,8 +81,17 @@ width:100%;    border:1px solid transparent;
             }
          }
 }
-.social-link{
-    color : rgb(174, 174, 174);
+.phn {
+    color : rgb(204, 204, 204)
+}
+.fb {
+    color : #4771c4;
+}
+.ins {
+    color :#C13584
+}
+.wts {
+    color : #25D366
 }
 @media (min-width:568px) {
         .btn {
