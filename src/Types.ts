@@ -5,7 +5,7 @@ export interface ILayout {
     children  : JSX.Element;
     description ?: string;
 }
+
 export interface INavbar {
-    isOpen:boolean;
-    setOpen: Dispatch<SetStateAction<boolean>>;
+    animateMenu : (from: string , to: string, hide:boolean) => void
 }
