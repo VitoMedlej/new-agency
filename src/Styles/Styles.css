@@ -130,13 +130,12 @@ body {
 
 .dotted {
   background: rgba(255, 255, 255, 0);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.5098039216) 1.3px, transparent 0);
   background-size: 36px 32px;
   background-position: -16px -55px;
   position: absolute;
   bottom: -1%;
   right: 1%;
-  z-index: 4124124;
+  z-index: 5;
   width: 150px;
   height: 150px;
 }

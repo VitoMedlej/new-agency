@@ -122,13 +122,13 @@ width:100%;    border:1px solid transparent;
 }
 .dotted {
     background: #ffffff00;
-    background-image: radial-gradient(#ffffff82 1.3px, transparent 0);
+    
     background-size: 36px 32px;
     background-position: -16px -55px;
     position: absolute;
     bottom: -1%;
     right: 1%;
-    z-index: 4124124;
+    z-index: 5;
     width: 150px;
     height: 150px;
 }

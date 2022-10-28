@@ -1,12 +1,13 @@
 import {Box, Button, Typography} from '@mui/material'
 import { useRouter } from 'next/router';
+import Dots from '../Desgin/Dots';
 import { lang } from '../Navbar/Navbar';
 
 const Hero = () => {
     const router = useRouter()
     const {l} = router.query; 
         return ( 
-        <Box >
+        <Box sx={{position:'relative'}}>
 
             <Box sx={{display:'flex',flexDirection:'column'}} className='mw center' >
                 
@@ -63,6 +64,7 @@ const Hero = () => {
                 </Box>
                 </Box>
             </Box>
+            <Dots color='#6000a9'/>
         </Box>
     )
 }
