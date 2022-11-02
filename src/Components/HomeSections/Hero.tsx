@@ -1,8 +1,13 @@
 import {Box, Button, Typography} from '@mui/material'
+import { useRouter } from 'next/router';
+import Dots from '../Desgin/Dots';
+import { lang } from '../Navbar/Navbar';
 
 const Hero = () => {
-    return (
-        <Box >
+    const router = useRouter()
+    const {l} = router.query; 
+        return ( 
+        <Box sx={{position:'relative'}}>
 
             <Box sx={{display:'flex',flexDirection:'column'}} className='mw center' >
                 
@@ -33,11 +38,11 @@ const Hero = () => {
                     }}
                     
                     >
-                        <span>Beirut</span>
+                        <span>{lang('Beirut','رخيص',`${l}`)}</span>
                         &nbsp;
-                        <span className='clr'>Web</span>
+                        <span className='clr'>{lang('Web','ويب',`${l}`)}</span>
                         &nbsp;
-                        <span>Affordable</span>
+                        <span>{lang('Affordable',' بيروت' ,`${l}`)}</span>
                     </Typography>
                     <Typography 
                     sx={{
@@ -51,11 +56,11 @@ const Hero = () => {
                             lg:'1.5em'
                         }
                     }}>
-                            Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.
+                          {lang('  Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.','تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا',`${l}`)}
                     </Typography>
                 <Box sx={{mt:'2em',gap:'.7em',flexWrap:'wrap',display:'flex',justifyContent:'center'}}>
-                    <Button className='btn b1'>GET STARTED</Button>
-                    <Button className='btn b2'>OUR WORK</Button>
+                    <Button className='btn b1'>{lang('GET STARTED',' البداء' ,`${l}`)}</Button>
+                    <Button className='btn b2'>{lang('OUR WORK',' مشاريعنا' ,`${l}`)} </Button>
                 </Box>
                 </Box>
             </Box>

@@ -1,8 +1,31 @@
 import {Box, Button, Typography} from '@mui/material'
 import {INavbar} from '../../Types'
 import {DragHandle} from '@mui/icons-material';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const Navbar = ({isOpen, setOpen} : INavbar) => {
+
+
+export const lang = (en:string,ar : string,language ?: string  | string[]) => {
+    if (language && language === "ar") {
+        return ar
+    }
+    return en
+}
+const Navbar = ({animateMenu} : INavbar) => {
+    const router = useRouter();
+    
+    const language = `${router.query.l}`;
+    useEffect(() => {
+      
+    if (language) {
+        localStorage.setItem('language', `${language}`);
+        return;
+    } 
+    localStorage.setItem('language', 'en');
+      
+    }, [language])
+ 
     return (
         <Box
             sx={{
@@ -15,23 +38,30 @@ const Navbar = ({isOpen, setOpen} : INavbar) => {
                 alignItems: 'center',
                 height: '100%',
                 padding: '1em',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                flexDirection: lang('row','row-reverse',language)
             }}
                 className="mw">
                 <Box sx={{width:'100px'}} className='center '>
-                    
                      <img className='img' src="/bwa.JPG" alt="BWA logo" />
                 </Box>
-                <Box className='center '>
+                <Box
+                sx={{
+                    flexDirection : lang('row','row-reverse',language)
+                }} className='center '>
                     <Button sx={{
                         mx: '1em'
                     }}>
 
-                        <Typography className='cursor' color='black'>
-                            العربية
+                        <Typography 
+                        onClick={()=> router.push('/?l=' + lang('ar','en',language))}
+                        className='cursor' color='black'>
+                            {lang('العربية','English',language)}
                         </Typography>
                     </Button>
                     <DragHandle
+                    onClick={()=> {
+                        animateMenu('-150%','0%',false)}}
                         className='cursor'
                         sx={{
                         color: 'black',

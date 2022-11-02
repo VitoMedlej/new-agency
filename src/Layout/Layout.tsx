@@ -5,10 +5,33 @@ import Footer from "../Components/Footer/Footer";
 import Menu from "../Components/Navbar/Menu/Menu";
 import Navbar from "../Components/Navbar/Navbar";
 import {ILayout} from "../Types";
+import gsap from 'gsap';
 
 const Layout = ({title, children, description} : ILayout) => {
-    const [isOpen,
-        setOpen] = useState(false)
+   
+        const animateMenu = (from: string, to : string,hide:boolean) => {
+            const tl = gsap.timeline();
+            if (!hide) {
+                // unhide the menu first then play the animations
+                tl.to('.main-menu',{duration:'.01',display:'flex'})
+            }
+            if (hide) {
+                // if we're closing the menu, hide the close button first
+                tl.to('.close-btn',{duration:'.01',pointerEvents:'none',opacity:0})
+            }
+            tl.fromTo('.slide1',{right:from},{duration:'.75',right:to})
+            tl.fromTo('.slide2',{left:from},{duration:'.6',left:to},'-=.75')
+            tl.fromTo('.slide3',{top:from},{duration:'.6',top:to},'-=.75')
+            // if we're opening the menu, show the close button last to avoid users clicking it 
+            // while the animations are playing
+            !hide && tl.to('.close-btn',{pointerEvents:'all',opacity:1})
+            
+            if (hide) {
+                // hide the menu at the end 
+                tl.to('.main-menu',{duration:'.01',display:'none'})
+            }
+        
+        }
     return (
 
         <div>
@@ -77,8 +100,8 @@ const Layout = ({title, children, description} : ILayout) => {
 
                 </Box>
             </Drawer> */}
-            <Menu/>
-            <Navbar isOpen={isOpen} setOpen={setOpen} />
+            <Menu animateMenu={animateMenu} />
+            <Navbar animateMenu={animateMenu}  />
             <> {children} </> 
             <Footer/>
         </div>

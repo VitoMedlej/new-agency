@@ -43,7 +43,7 @@ function Footer() {
             <Divider/>
             <Box
                 sx={{
-                width: '100%',
+             padding:'1em',
                 color: 'black',
                 minHeight: '200px',
                 display: 'flex',
