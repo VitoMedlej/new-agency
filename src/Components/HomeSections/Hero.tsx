@@ -64,7 +64,6 @@ const Hero = () => {
                 </Box>
                 </Box>
             </Box>
-            <Dots color='#6000a9'/>
         </Box>
     )
 }

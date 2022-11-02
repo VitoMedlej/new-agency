@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 
 
-export const lang = (en:string,ar : string,language ?: string) => {
+export const lang = (en:string,ar : string,language ?: string  | string[]) => {
     if (language && language === "ar") {
         return ar
     }
