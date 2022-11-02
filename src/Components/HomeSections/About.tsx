@@ -76,6 +76,7 @@ const About = () => {
 
                         {lang(content[1].en, content[1].ar, l)}
                     </Typography>
+                    
                     <Button className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                     </Button>
 
