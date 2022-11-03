@@ -28,6 +28,9 @@ const WhyUs = () => {
         {lang('this is some random ass text, dw about it nigga',"ما تخترن تخترن تخترن تخترن تخترن تخترن",l)}
         </Typography>
     </Box>
+    <Box sx={{background:'gray',width:{md:'80%'}}}>
+    hello wolrd
+    </Box>
 </Box>
   )
 }
