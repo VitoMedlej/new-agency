@@ -69,6 +69,8 @@ const WhyUs = () => {
             }}>
                 <Typography className='h1'>
                     {lang('Why Choose Us?', "لما تخترنا؟", l)}
+
+                    
                 </Typography>
                 <Typography sx={{
                     color: '#c2c2c2'
@@ -132,7 +134,6 @@ const WhyUs = () => {
                         </Typography>
                         <Typography >
                             {lang(reason.text.en, reason.text.ar, l)}
-
                         </Typography>
                     </Box>
                 })}
