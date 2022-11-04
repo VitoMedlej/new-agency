@@ -12,7 +12,7 @@ const Reasons = () => {
             sx={{
             // py: '5em',
             mx: '1em',
-            mb:'5em',
+            pb:'5em',
             pt:'2em',
             position: 'relative'
         }}>

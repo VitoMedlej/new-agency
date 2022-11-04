@@ -2,6 +2,7 @@ import {Box, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
 import React from 'react'
 import {lang} from '../Navbar/Navbar';
+import Typo from '../Typography/Typo';
 
 const Reasons = [
     {
@@ -12,20 +13,8 @@ const Reasons = [
         text: {
             en: 'lorem the fuckeig fuocok fasf',
             ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
-        }
-    ,    img:'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
-
-    }, {
-        title: {
-            en: 'The Cheapest',
-            ar: 'الارخص'
         },
-        text: {
-            en: 'lorem the fuckeig fuocok fasf',
-            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
-        }
-    ,    img:'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
-    
+        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
     }, {
         title: {
             en: 'The Cheapest',
@@ -35,10 +24,19 @@ const Reasons = [
             en: 'lorem the fuckeig fuocok fasf',
             ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
         },
-        img:'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
-
+        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
     }, {
-        img:'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
+        title: {
+            en: 'The Cheapest',
+            ar: 'الارخص'
+        },
+        text: {
+            en: 'lorem the fuckeig fuocok fasf',
+            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
+        },
+        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
+    }, {
+        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
         title: {
             en: 'The Cheapest',
             ar: 'الارخص'
@@ -50,8 +48,6 @@ const Reasons = [
     }
 ]
 const WhyUs = () => {
-    const router = useRouter()
-    const {l} = router.query;
     return (
         <Box
             sx={{
@@ -67,16 +63,21 @@ const WhyUs = () => {
                 pt: '1.5em',
                 px: '1em'
             }}>
-                <Typography className='h1'>
-                    {lang('Why Choose Us?', "لما تخترنا؟", l)}
 
-                    
-                </Typography>
-                <Typography sx={{
+                <Typo
+                    className='h1'
+                    en='Why Choose Us?'
+                    ar='لما تخترنا؟'
+                    sx={{
                     color: '#c2c2c2'
-                }}>
-                    {lang('this is some random ass text, dw about it nigga', "ما تخترن تخترن تخترن تخترن تخترن تخترن", l)}
-                </Typography>
+                }}/>
+                <Typo
+                    en='this is some random ass text, dw about it nigga'
+                    ar='ما تخترن تخترن تخترن تخترن تخترن تخترن'
+                    sx={{
+                    color: '#c2c2c2'
+                }}/>
+
             </Box>
             <Box
                 className='mw'
@@ -98,8 +99,8 @@ const WhyUs = () => {
                 display: 'flex',
                 background: 'white',
                 justifyContent: 'space-around',
-                borderRadius:"9px",
-}}>
+                borderRadius: "9px"
+            }}>
 
                 {Reasons.map((reason, idx : number) => {
 
@@ -108,16 +109,17 @@ const WhyUs = () => {
                         sx={{
                         width: {
                             xs: '42%',
-                            sm : '25%',
+                            sm: '25%',
                             md: '21%'
                         },
                         padding: '.75em',
                         height: '100px',
                         background: 'white',
                         position: 'relative',
-                        color:'white',
+                        color: 'white',
                         zIndex: '111',
-                        backgroundImage: `url('${reason?.img}')`
+                        backgroundImage: `url('${reason
+                            ?.img}')`
                     }}>
                         <Box
                             className='absolute'
@@ -125,16 +127,17 @@ const WhyUs = () => {
                             background: '#00000070',
                             zIndex: '-1'
                         }}></Box>
-                        <Typography
+
+                        <Typo
                             sx={{
                             fontSize: '1.5em',
                             fontWeight: '700'
-                        }}>
-                            {lang(reason.title.en, reason.title.ar, l)}
-                        </Typography>
-                        <Typography >
-                            {lang(reason.text.en, reason.text.ar, l)}
-                        </Typography>
+                        }}
+                            en={reason.title.en}
+                            ar={reason.title.ar}/>
+
+                        <Typo en={reason.text.en} ar={reason.text.ar}/>
+
                     </Box>
                 })}
 
