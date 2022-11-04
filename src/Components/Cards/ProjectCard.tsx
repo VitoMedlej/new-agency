@@ -1,15 +1,22 @@
 import {Box, Typography} from '@mui/material'
 
 interface IProjectCard {
-    display?: any;
+    sx?: any;
+    data : {
+        title : string;
+        href : string;
+        img : string;
+    }
 }
-const ProjectCard = (display:IProjectCard) => {
+const ProjectCard = ({sx,data}:IProjectCard) => {
+    
     return (
         <Box
             sx={{
-           display:display ? display : 'flex',
+            ...sx,
             width: {
-                md: '47%',
+                sm: '47%',
+                md : '40%',
                 lg: '30%',
             },
             minHeight: '200px',
@@ -29,10 +36,11 @@ const ProjectCard = (display:IProjectCard) => {
                 fontWeight: 'bold',
                 pt: '.25em'
             }}>
-                Project 1
+                {data.title}
             </Typography>
             <a href='/'>
-                elvito.netlify.app
+            {data.href}
+
             </a>
         </Box>
     )

@@ -51,8 +51,9 @@ const WhyUs = () => {
     return (
         <Box
             sx={{
-            my: '5em',
+            
             px: '1em',
+            mb:'10em',
             position: 'relative',
             background: '#6000a9',
             color: 'white',
@@ -69,7 +70,7 @@ const WhyUs = () => {
                     en='Why Choose Us?'
                     ar='لما تخترنا؟'
                     sx={{
-                    color: '#c2c2c2'
+                    color: 'white'
                 }}/>
                 <Typo
                     en='this is some random ass text, dw about it nigga'
@@ -108,7 +109,7 @@ const WhyUs = () => {
                         key={idx}
                         sx={{
                         width: {
-                            xs: '42%',
+                            xs: '40%',
                             sm: '25%',
                             md: '21%'
                         },

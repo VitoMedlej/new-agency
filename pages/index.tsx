@@ -13,8 +13,8 @@ const index = () => {
         <Hero/>
         <About/>
         <Reasons/>
-        <WhyUs/>
         <OurProjects/>
+        <WhyUs/>
         <Contact/>
       </>
     </Layout>

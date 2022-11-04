@@ -9,7 +9,8 @@ const Contact = () => {
             mx: '1em',
             mb: '5em',
             pt: '2em',
-            position: 'relative'
+            position: 'relative',
+            display:'none',
         }}>
             <Box
                 sx={{

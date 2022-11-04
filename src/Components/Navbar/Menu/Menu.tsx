@@ -4,10 +4,35 @@ import Link from 'next/link';
 import SocialMedia from '../../SocialMedia/SocialMedia';
 import Dots from '../../Desgin/Dots';
 import { INavbar } from '../../../Types';
+import Typo from '../../Typography/Typo';
+import { lang } from '../Navbar';
+import { useRouter } from 'next/router';
 
+
+const links = 
+[
+    {
+        title: {en:'HOME',ar:'الرايسية'},
+        href: '/'
+    }, {
+        title: {en:'ABOUT',ar:'من نحن'},
+        href: '/services'
+    }, {
+        title: {en:'PORTFOLIO',ar:'معرض'},
+        href: '/portfolio'
+    }, {
+        title: {en:'PRICING',ar:'السعر'},
+        href: '/about'
+    }, {
+        title: {en:'CONTACT',ar:'تواصل معنا'},
+        href: '/pricing'
+    }
+]
 const Menu = ({animateMenu } : INavbar) => {
 
-   
+    const router = useRouter();
+    const {l} = router.query;
+
     return (
         <Box
         className='main-menu'
@@ -110,7 +135,8 @@ const Menu = ({animateMenu } : INavbar) => {
                     right:0,
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'baseline',
+                textAlign: lang('left','right',l),
+                alignItems: lang('baseline','end',l),
                 justifyContent: 'center',
                 background: '#19181d !important',
                 height: '100%',
@@ -125,34 +151,18 @@ const Menu = ({animateMenu } : INavbar) => {
                 <Box
                     className='menu-links '
                     sx={{
+                    pl : lang('3em','0',l),
+                    pr : lang('0','3em',l),
                     pt: {
                         xs: '2em',
                         sm: 0
-                    }
+                    },
+                    
                 }}>
 
-                    {[
-                        {
-                            title: 'HOME',
-                            href: '/'
-                        }, {
-                            title: 'SERVICES',
-                            href: '/services'
-                        }, {
-                            title: 'PORTFOLIO',
-                            href: '/portfolio'
-                        }, {
-                            title: 'ABOUT',
-                            href: '/about'
-                        }, {
-                            title: 'PRICING',
-                            href: '/pricing'
-                        }
-                    ].map(link => {
-                        return <Link key={link.title} href={`${link.href}`}>
-                            <Typography>
-                                {link.title}
-                            </Typography>
+                    {links.map(link => {
+                        return <Link key={link.href} href={`${link.href}`}>
+                            <Typo en={link.title.en} ar={link.title.ar} />
                         </Link>
                     })
 }

@@ -10,10 +10,8 @@ const Reasons = () => {
     return (
         <Box
             sx={{
-            // py: '5em',
             mx: '1em',
-            pb:'5em',
-            pt:'2em',
+           
             position: 'relative'
         }}>
             <Box className='mw'>
