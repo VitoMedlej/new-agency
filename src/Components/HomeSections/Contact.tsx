@@ -11,35 +11,50 @@ const Contact = () => {
         <Box
             sx={{
             py: '5em',
-            mx: '1em',
+            mx: {xs:0,md:'1em'},
             mb: '5em',
-            pt: '2em',
+            pt: {xs:'5em',md:'10em'},
             position: 'relative'
         }}>
             <Box
                 sx={{
                 display: 'flex',
-                justifyContent: {xs:'center',md:'space-between'}
+                flexDirection: lang('row-reverse', 'row', l),
+                justifyContent: {
+                    xs: 'center',
+                    md: 'space-between'
+                }
             }}
                 className='mw'>
 
-                <Box sx={{
+                <Box
+                    sx={{
                     width: '57%',
-                    display : {xs:'none',md:'block'}
+                    display: {
+                        xs: 'none',
+                        md: 'block'
+                    }
                 }}>
                     <img
                         className='img'
                         src="https://images.pexels.com/photos/7792770/pexels-photo-7792770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt=""/>
+                 <Box className='mw'>
+                faksfasf
+            </Box>
                 </Box>
                 <Box
                     sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'end',
+                    alignItems:{xs:'center',md: lang('baseline', 'end', l)},
                     padding: '1em',
-                    width: {xs:'100%',md:'43%'},
+                    width: {
+                        xs: '100%',
+                        md: '43%'
+                    },
                     maxWidth: '500px',
+
                     borderRadius: '9px',
                     textAlign: lang('left', 'right', l)
                 }}>
@@ -57,24 +72,27 @@ const Contact = () => {
                         display: 'flex',
                         mt: '2em',
                         flexDirection: 'column',
-                        gap : '1.25em',
+                        gap: '1.25em',
                         width: '90%',
                         justifyContent: 'right'
                     }}>
-                        <TextField id="outlined-basic" label="الاسم" variant="outlined"/>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
-                        <TextField id="outlined-basic" label="Outlined" variant="outlined"/>
-                        <Button className='btn b2'>
-                            {lang('OUR WORK', ' مشاريعنا', `${l}`)}
-                        </Button>
+                        <TextField id="outlined-basic" label={lang('Name',"الاسم",l)} variant="outlined"/>
+                        <TextField id="outlined-basic" label={lang('Email',"الايميل",l)} variant="outlined"/>
+                        <TextField id="outlined-basic" label={lang('Phone',"الهاتف",l)} variant="outlined"/>
+                        <TextField id="outlined-basic" rows={4} multiline={true} label={lang('Message',"رسالة",l)}variant="outlined"/>
+                        <Box sx={{
+                                textAlign: {xs:'center',md:'inherit'},
+                            width: '100%'
+                        }}>
+                            <Button className='btn b1'>
+                                {lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                            </Button>
 
+                        </Box>
                     </Box>
                 </Box>
             </Box>
-                <Box className='mw'>
-                    faksfasf
-                </Box>
+         
 
         </Box>
     )
