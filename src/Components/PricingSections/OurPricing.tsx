@@ -13,6 +13,8 @@ const plans = [
         },
         isFeatured: false,
         price: {en:19.99,ar:22},
+        description:{en:'Best for starters',ar:'جيد للنوبس'},
+
         planFeatures: [
             {
                 en: '2 pages',
@@ -32,6 +34,7 @@ const plans = [
             ar: 'الخطة المتطورة '
         },
         isFeatured: true,
+        description:{en:'Best for professionals',ar:'مقلبشل شسلهخشت'},
         price: {en:39.99,ar:22},
         planFeatures: [
             {
@@ -52,6 +55,7 @@ const plans = [
             ar: 'الخطة المثالية '
         },
         isFeatured: false,
+        description:{en:'Fully customized plan ',ar:'فات اسس نيغا'},
         price: {en:59.99,ar:22},
         planFeatures: [
             {
@@ -86,9 +90,12 @@ const OurPricing = () => {
             {plans && plans.map(plan => {
 
                 return <PlanCard
+                key={plan.title.en}
                 title={plan.title}
+                description={plan.description}
                 rtl={lang('false','true',l)}
                 isFeatured={plan.isFeatured}
+                planFeatures={plan.planFeatures}
                  price={plan.price}/>
             })}
 

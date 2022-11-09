@@ -1,5 +1,6 @@
 import {Box, Button, ListItem} from '@mui/material'
 import { useRouter } from 'next/router';
+import { MultiLang } from '../../Types';
 import { lang } from '../Navbar/Navbar';
 import Typo from '../Typography/Typo';
 
@@ -8,13 +9,17 @@ interface PlanCard {
     rtl ?: string ;
     isFeatured :boolean;
     price : {en : number | string, ar : number | string};
-    title : {en : string , ar : string}
+    title : MultiLang;
+    planFeatures : MultiLang[];
+    description : MultiLang;
 }
 const PlanCard = ({
     rtl ,
     price,
     title,
-    isFeatured
+    isFeatured,
+    description
+    ,planFeatures
 }
 :PlanCard) => {
     const router = useRouter();
@@ -59,8 +64,8 @@ const PlanCard = ({
                 sx={{
                 color: '#707070'
             }}
-                en='Recommended'
-                ar='ينصح به'/>
+                en={description.en}
+                ar={description.ar}/>
             <Typo
                 sx={{
                 fontWeight: '100',
@@ -88,17 +93,16 @@ const PlanCard = ({
                     ar=' : تضمن'/>
 
                 <ul className={rtl == 'true' ? 'drrtl' : ''}>
-                    <li>
-                        <Typo en='10+ pages' ar='10+ صفحات'/>
-                    </li>
-                    <li>
-                        <Typo en='10+ pages' ar='10+ صفحات'/>
-                    </li>
-                        
-                    <li>
-                        <Typo en='10+ pages' ar='10+ صفحات'/>
-                    </li>
+                    
+                    {planFeatures.map((feature,idx:number)=>{
 
+                       return <li>
+                        <Typo
+                        key={idx}
+                        en={feature.en} ar={feature.ar}/>
+                    </li>
+                    })}
+                 
                    
                 </ul>
 
