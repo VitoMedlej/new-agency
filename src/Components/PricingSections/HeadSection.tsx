@@ -64,17 +64,19 @@ const HeadSection = () => {
 
                 <Box
                     sx={{
-                    mt: '2em',
+                    my: '2.5em',
                     gap: '.7em',
                     flexWrap: 'wrap',
                     display: 'flex',
                     justifyContent: 'center'
                 }}>
-                    <Button className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                    <Button 
+                    sx={{color:'#6000a9 !important',background:'white !important'}}
+                    className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
                     <Button 
                     sx={{
-                        border: '1px solid white',
-                        color: 'white',
+                        border: '1px solid white !important',
+                        color: 'white !important',
                     }}
                     className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                     </Button>

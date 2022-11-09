@@ -38,10 +38,10 @@ body {
 }
 
 .btn {
+  width: 158px;
   font-weight: 600;
   padding: 0.5em 2.5em;
   transition: all 0.5s ease;
-  width: 100%;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -166,8 +166,16 @@ body {
   width: 55px;
 }
 
-@media (min-width: 568px) {
+.drrtl {
+  direction: rtl;
+}
+
+.list ul li p {
+  color: rgba(0, 0, 0, 0.6392156863);
+}
+
+@media (max-width: 568px) {
   .btn {
-    width: 158px !important;
+    width: 95% !important;
   }
 }/*# sourceMappingURL=Styles.css.map */
