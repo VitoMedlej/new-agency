@@ -45,7 +45,7 @@ const HeadSection = () => {
                     }
                 }}
                     en='OUR PRICES ARE THE'
-                    ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا '/>
+                    ar='تصمبم ويب؟ تطوبر لاننا '/>
 
                 <Typo
                     sx={{

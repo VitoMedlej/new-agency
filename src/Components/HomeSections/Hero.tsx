@@ -1,11 +1,28 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
+import { useEffect } from 'react';
 import Dots from '../Desgin/Dots';
 import {lang} from '../Navbar/Navbar';
+import gsap from 'gsap';
+import Typo from '../Typography/Typo';
 
+
+const ani = {
+    opacity : 0,
+
+}
 const Hero = () => {
     const router = useRouter()
     const {l} = router.query;
+
+    useEffect(() => {
+        const tl = gsap.timeline()
+        tl.fromTo('.s1', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.20'})
+        tl.fromTo('.s2',{opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
+        tl.fromTo('.s3', {opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
+        tl.fromTo('.t2', {opacity : 0,y:'5'},{y:0,opacity:1},'-=.08')
+        tl.fromTo('.btns button', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.25})
+    },[])
     return (
         <Box sx={{
             position: 'relative'
@@ -26,6 +43,7 @@ const Hero = () => {
                 }}>
 
                     <Typography
+                    className='t1'
                         sx={{
                         fontWeight: 'bolder',
                         display: 'flex',
@@ -39,13 +57,16 @@ const Hero = () => {
                             xl: '7.5em'
                         }
                     }}>
-                        <span>{lang('Beirut', 'رخيص', `${l}`)}</span>
+                        <span className='s1'>{lang('Beirut', 'رخيص', `${l}`)}</span>
                         &nbsp;
-                        <span className='clr'>{lang('Web', 'ويب', `${l}`)}</span>
+                        <span className='clr s2'>{lang('Web', 'ويب', `${l}`)}</span>
                         &nbsp;
-                        <span>{lang('Affordable', ' بيروت', `${l}`)}</span>
+                        <span className='s3'>{lang('Affordable', ' بيروت', `${l}`)}</span>
                     </Typography>
-                    <Typography
+                    <Typo
+                    className='t2'
+                        en='Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.'
+                        ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا'
                         sx={{
                         maxWidth: '640px',
                         margin: '0em auto',
@@ -56,12 +77,11 @@ const Hero = () => {
                             sm: '1.3em',
                             lg: '1.5em'
                         }
-                    }}>
-                        {lang('  Web design? web development? doesnt matter! Get your effective website today f' +
-                                'or a price of a t-shirt.',
-                        'تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا', `${l}`)}
-                    </Typography>
+                    }} />
+                       
+                    
                     <Box
+                        className='btns'
                         sx={{
                         mt: '2em',
                         gap: '.7em',

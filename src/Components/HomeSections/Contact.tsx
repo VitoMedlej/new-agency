@@ -1,6 +1,7 @@
 import {Box, Button, TextField} from '@mui/material'
 import {useRouter} from 'next/router'
 import React from 'react'
+import Dots from '../Desgin/Dots'
 import {lang} from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
 
@@ -29,12 +30,22 @@ const Contact = () => {
 
                 <Box
                     sx={{
-                    width: '57%',
+
+                        position:'relative',
+                        width: '57%',
                     display: {
                         xs: 'none',
                         md: 'block'
                     }
                 }}>
+                    <Dots 
+                    sx={{
+                        top: '-23%',
+                        left: '-5%',
+                    
+                    }}
+                    color='#6000a9'/>
+
                     <img
                         className='img'
                         src="https://images.pexels.com/photos/7792770/pexels-photo-7792770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -74,8 +85,16 @@ const Contact = () => {
                         flexDirection: 'column',
                         gap: '1.25em',
                         width: '90%',
+                        position:'relative',
                         justifyContent: 'right'
                     }}>
+                             <Dots 
+                    sx={{
+                        top: '105%',
+                        left: '-8%',
+                        display : {md:'none`'}
+                    }}
+                  color='#02010182' />
                         <TextField id="outlined-basic" label={lang('Name',"الاسم",l)} variant="outlined"/>
                         <TextField id="outlined-basic" label={lang('Email',"الايميل",l)} variant="outlined"/>
                         <TextField id="outlined-basic" label={lang('Phone',"الهاتف",l)} variant="outlined"/>
@@ -87,7 +106,7 @@ const Contact = () => {
                             <Button className='btn b1'>
                                 {lang('OUR WORK', ' مشاريعنا', `${l}`)}
                             </Button>
-
+                    
                         </Box>
                     </Box>
                 </Box>

@@ -100,10 +100,13 @@ const About = () => {
                     },
                     position: 'relative'
                 }}>
+                    <Box>
+
                     <img
                         src="https://res.cloudinary.com/dwcu3wcol/image/upload/v1667124444/pexels-photo-5821296_mroznf.jpg"
                         className='img '
                         alt=""/>
+                        </Box>
                     <Box className='style-box ' sx={{right:lang('-6%','85%',l)}}>
                         <Box className='sb1'>
                             {/* <Box className='sb2'/> */}

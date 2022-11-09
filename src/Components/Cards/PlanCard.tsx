@@ -27,16 +27,17 @@ const PlanCard = ({
     return (
         <Box
             sx={{
+            position : 'relative',
             padding: '1em',
             textAlign: lang('left', 'right', l),
+            transform: isFeatured ? {md:'translateY(-10%)'} : 0,
             width: {
                 xs: '95%',
                 sm : '43%',
-                md: '300px'
+                md: '340px'
             },
-            minHeight: '500px',
+            minHeight: {xs:'400px',md:'550px'},
             background: 'white',
-            // border: '1px solid #0000002e',
             boxShadow: 'rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px',
             borderRadius: '7px'
         }}>

@@ -1,5 +1,5 @@
 import {Box, Button} from '@mui/material'
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import React from 'react'
 import PlanCard from '../Cards/PlanCard';
 import {lang} from '../Navbar/Navbar';
@@ -12,8 +12,14 @@ const plans = [
             ar: 'الخطة الأساسية '
         },
         isFeatured: false,
-        price: {en:19.99,ar:22},
-        description:{en:'Best for starters',ar:'جيد للنوبس'},
+        price: {
+            en: 19.99,
+            ar: 22
+        },
+        description: {
+            en: 'Best for starters',
+            ar: 'جيد للنوبس'
+        },
 
         planFeatures: [
             {
@@ -34,8 +40,14 @@ const plans = [
             ar: 'الخطة المتطورة '
         },
         isFeatured: true,
-        description:{en:'Best for professionals',ar:'مقلبشل شسلهخشت'},
-        price: {en:39.99,ar:22},
+        description: {
+            en: 'Best for professionals',
+            ar: 'مقلبشل شسلهخشت'
+        },
+        price: {
+            en: 39.99,
+            ar: 22
+        },
         planFeatures: [
             {
                 en: '10 pages',
@@ -55,8 +67,14 @@ const plans = [
             ar: 'الخطة المثالية '
         },
         isFeatured: false,
-        description:{en:'Fully customized plan ',ar:'فات اسس نيغا'},
-        price: {en:59.99,ar:22},
+        description: {
+            en: 'Fully customized plan ',
+            ar: 'فات اسس نيغا'
+        },
+        price: {
+            en: 59.99,
+            ar: 22
+        },
         planFeatures: [
             {
                 en: '200 pages',
@@ -82,6 +100,7 @@ const OurPricing = () => {
             sx={{
             justifyContent: 'space-evenly',
             display: 'flex',
+            flexDirection: lang('row','row-reverse',l),
             py: '1em',
             gap: '1.5em',
             flexWrap: 'wrap'
@@ -89,14 +108,14 @@ const OurPricing = () => {
 
             {plans && plans.map(plan => {
 
-                return <PlanCard
-                key={plan.title.en}
-                title={plan.title}
-                description={plan.description}
-                rtl={lang('false','true',l)}
-                isFeatured={plan.isFeatured}
-                planFeatures={plan.planFeatures}
-                 price={plan.price}/>
+            return <PlanCard
+                    key={plan.title.en}
+                    title={plan.title}
+                    description={plan.description}
+                    rtl={lang('false', 'true', l)}
+                    isFeatured={plan.isFeatured}
+                    planFeatures={plan.planFeatures}
+                    price={plan.price}/>
             })}
 
         </Box>
