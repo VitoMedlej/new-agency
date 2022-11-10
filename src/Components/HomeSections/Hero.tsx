@@ -17,11 +17,11 @@ const Hero = () => {
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.fromTo('.s1', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.20'})
+        tl.fromTo('.s1', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.1'})
         tl.fromTo('.s2',{opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.s3', {opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.t2', {opacity : 0,y:'5'},{y:0,opacity:1},'-=.08')
-        tl.fromTo('.btns button', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.25})
+        tl.fromTo('.btns button', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.20})
     },[])
     return (
         <Box sx={{

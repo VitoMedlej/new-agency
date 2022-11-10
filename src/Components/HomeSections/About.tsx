@@ -1,8 +1,9 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React from 'react'
+import React, { useEffect } from 'react'
 import Dots from '../Desgin/Dots';
-import {lang} from '../Navbar/Navbar'
+import {lang} from '../Navbar/Navbar';
+import gsap from 'gsap';
 
 const content = [
     {
@@ -24,12 +25,43 @@ const content = [
 const About = () => {
     const router = useRouter();
     const {l} = router.query;
+    useEffect(() => {
+
+        gsap.to('.about-img div',{duration:1.2,delay:1,width:'100%',scrollTrigger : {
+            trigger : '.about-img',
+            start : 'top 50%',
+        }})
+
+        gsap.fromTo('.t3',{opacity:0,y:'5'},{y:0,opacity:'1',scrollTrigger : {
+            trigger : '.t3',
+            start : 'top 50%',
+            markers : true,
+        }})
+        gsap.fromTo('.t4',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.1',scrollTrigger : {
+            trigger : '.t3',
+            start : 'top 50%',
+            markers : true,
+        }})
+        gsap.fromTo('.t5',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.15',scrollTrigger : {
+            trigger : '.t3',
+            start : 'top 50%',
+            markers : true,
+        }})
+        gsap.fromTo('.t6',{opacity:0,x:'-10'},{x:0,opacity:'1',delay:'.25',scrollTrigger : {
+            trigger : '.t3',
+            start : 'top 50%',
+            markers : true,
+        }})
+        
+        
+    },[])
     return (
         <Box
             sx={{
             my: '10em',
             mx: '1em',
-            position: 'relative'
+            position: 'relative',
+
         }}>
 
             <Box
@@ -41,7 +73,7 @@ const About = () => {
                 },
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
-                overflow:'hidden'
+                overflow: 'hidden'
             }}
                 className='mw '>
                 <Box
@@ -53,12 +85,16 @@ const About = () => {
                         textAlign: lang('left', 'right', l)
                     }
                 }}>
-                    <Typography className='h1'>
+                    <Typography className='h1 t3'>
                         {lang('Who We Are', 'من نحن؟', l)}
                     </Typography>
                     <Typography
+                    className='t4'
                         sx={{
-                        fontSize:{xs:'1em',lg:'1.2em'},
+                        fontSize: {
+                            xs: '1em',
+                            lg: '1.2em'
+                        },
                         fontWeight: '500',
                         py: '.75em',
                         color: '#000000b8'
@@ -67,23 +103,29 @@ const About = () => {
 
                     </Typography>
                     <Typography
+                    className='t5'
+
                         sx={{
                         fontWeight: '500',
-                        fontSize:{xs:'1em',lg:'1.2em'},
+                        fontSize: {
+                            xs: '1em',
+                            lg: '1.2em'
+                        },
                         pb: '1.25em',
                         color: '#000000b8'
                     }}>
 
                         {lang(content[1].en, content[1].ar, l)}
                     </Typography>
-                    
-                    <Button className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+
+                    <Button className='btn b2 t6'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                     </Button>
 
                 </Box>
                 <Box
                     className='about-img'
                     sx={{
+                        overflow: 'hidden',
                     mb: {
                         xs: '1em',
                         lg: 0
@@ -100,14 +142,25 @@ const About = () => {
                     },
                     position: 'relative'
                 }}>
-                    <Box>
+                    <Box
+                        sx={{
+                        width: '0%',
+                        position: 'absolute',
+                        height: `100%`,
+                        borderRadius: '4px',
+                        
+                    }}>
 
-                    <img
-                        src="https://res.cloudinary.com/dwcu3wcol/image/upload/v1667124444/pexels-photo-5821296_mroznf.jpg"
-                        className='img '
-                        alt=""/>
-                        </Box>
-                    <Box className='style-box ' sx={{right:lang('-6%','85%',l)}}>
+                        <img
+                            src="https://res.cloudinary.com/dwcu3wcol/image/upload/v1667124444/pexels-photo-5821296_mroznf.jpg"
+                            className='img '
+                            alt=""/>
+                    </Box>
+                    <Box
+                        className='style-box '
+                        sx={{
+                        right: lang('-6%', '85%', l)
+                    }}>
                         <Box className='sb1'>
                             {/* <Box className='sb2'/> */}
                         </Box>

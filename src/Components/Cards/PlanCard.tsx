@@ -97,9 +97,9 @@ const PlanCard = ({
                     
                     {planFeatures.map((feature,idx:number)=>{
 
-                       return <li>
+                       return <li  key={idx}>
                         <Typo
-                        key={idx}
+                       
                         en={feature.en} ar={feature.ar}/>
                     </li>
                     })}
