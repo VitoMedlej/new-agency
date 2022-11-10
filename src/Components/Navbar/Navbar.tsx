@@ -54,7 +54,7 @@ const Navbar = ({animateMenu} : INavbar) => {
                     }}>
 
                         <Typography 
-                        onClick={()=> router.push('/?l=' + lang('ar','en',language))}
+                        onClick={()=> router.push(`${router.pathname}?l=` + lang('ar','en',language))}
                         className='cursor' color='black'>
                             {lang('العربية','English',language)}
                         </Typography>

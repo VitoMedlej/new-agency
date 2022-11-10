@@ -38,10 +38,10 @@ body {
 }
 
 .btn {
+  width: 158px;
   font-weight: 600;
   padding: 0.5em 2.5em;
   transition: all 0.5s ease;
-  width: 100%;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -76,7 +76,6 @@ body {
 }
 .menu-links p {
   transition: all 0.5s ease;
-  margin-left: 1em;
   font-size: 3em;
   padding: 0.25em 0;
   font-weight: 800;
@@ -106,6 +105,10 @@ body {
 .menu-bg {
   background-image: url("https://res.cloudinary.com/dwcu3wcol/image/upload/v1666711311/pexels-photo-1092644_yceep8.webp");
   background-size: cover;
+}
+
+.t1 span {
+  opacity: 0;
 }
 
 .absolute {
@@ -167,8 +170,16 @@ body {
   width: 55px;
 }
 
-@media (min-width: 568px) {
+.drrtl {
+  direction: rtl;
+}
+
+.list ul li p {
+  color: rgba(0, 0, 0, 0.6392156863);
+}
+
+@media (max-width: 568px) {
   .btn {
-    width: 158px !important;
+    width: 95% !important;
   }
 }/*# sourceMappingURL=Styles.css.map */

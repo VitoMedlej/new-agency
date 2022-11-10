@@ -35,11 +35,13 @@ $trans : all .5s ease;
 }
 .btn {
     // color:black;
+    width:158px ;
+
     font-weight: 600;
     padding: .5em 2.5em;
     transition: $trans;
 
-width:100%;    border:1px solid transparent;
+   border:1px solid transparent;
     border-radius: 0;
 }
 .b1 {
@@ -62,9 +64,11 @@ width:100%;    border:1px solid transparent;
     object-fit: cover;
 }
 // .about-img {
-    // img {
-        // border-radius: 70px;
-    // }
+//     &:hover  {
+//         div {
+//             width : none;
+//         }
+//     }
 // }
 .close-btn{
     svg {
@@ -76,7 +80,7 @@ width:100%;    border:1px solid transparent;
     flex-direction: column;
          p {
     transition : $trans;
-            margin-left: 1em;
+            
             font-size: 3em;
             padding :  .25em 0;
             font-weight: 800;
@@ -103,6 +107,11 @@ width:100%;    border:1px solid transparent;
     background-image: url('https://res.cloudinary.com/dwcu3wcol/image/upload/v1666711311/pexels-photo-1092644_yceep8.webp');
     background-size:cover;
 
+}
+.t1 {
+    span {
+        opacity: 0;
+    }
 }
 .absolute {
     width: 100%;
@@ -163,9 +172,22 @@ width:100%;    border:1px solid transparent;
 
     }
 }
-@media (min-width:568px) {
-        .btn {
-            width:158px !important;
+.drrtl {
+    direction: rtl;
+}
 
+.list {
+    ul {
+      
+        li {
+            p {
+                color : #000000a3;
+            }
+        }
+    }
+}
+@media (max-width:568px) {
+        .btn {
+            width: 95% !important;
         }
 }
