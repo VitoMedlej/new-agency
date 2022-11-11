@@ -35,22 +35,22 @@ const About = () => {
         gsap.fromTo('.t3',{opacity:0,y:'5'},{y:0,opacity:'1',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t4',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.1',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t5',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.15',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t6',{opacity:0,x:'-10'},{x:0,opacity:'1',delay:'.25',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         
         

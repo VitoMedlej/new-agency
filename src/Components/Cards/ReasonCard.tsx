@@ -2,11 +2,12 @@ import {Box, Typography} from "@mui/material"
 import {useRouter} from "next/router";
 import {lang} from "../Navbar/Navbar"
 
-const ReasonCard = () => {
+const ReasonCard = ({className}:any) => {
     const router = useRouter()
     const {l} = router.query;
     return (
         <Box
+        className={`z${className}`}
             sx={{
                 margin:'.5em',
             minHeight: {
