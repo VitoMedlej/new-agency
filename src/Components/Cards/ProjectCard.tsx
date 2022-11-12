@@ -2,16 +2,18 @@ import {Box, Typography} from '@mui/material'
 
 interface IProjectCard {
     sx?: any;
+    className : string;
     data : {
         title : string;
         href : string;
         img : string;
     }
 }
-const ProjectCard = ({sx,data}:IProjectCard) => {
+const ProjectCard = ({sx,className,data}:IProjectCard) => {
     
     return (
         <Box
+        className={className}
             sx={{
             ...sx,
             width: {

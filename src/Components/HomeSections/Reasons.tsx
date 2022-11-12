@@ -1,6 +1,6 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import ReasonCard from '../Cards/ReasonCard';
 import {lang} from '../Navbar/Navbar';
 import Typo from '../Typography/Typo';
@@ -11,15 +11,68 @@ const Reasons = () => {
     const {l} = router.query;
 
     useEffect(() => {
-      
-        gsap.fromTo('.tt0',{y:'5',opacity:0},{y:0,opacity:1,scrollTrigger:{trigger:'.tt0',start:'top 60%'}})
-        gsap.fromTo('.tt1',{y:'5',opacity:0},{delay:.15,y:0,opacity:1,scrollTrigger:{trigger:'.tt0',start:'top 60%'}})
-        gsap.fromTo('.tt2',{x:'-5',opacity:0},{delay:.20,x:0,opacity:1,scrollTrigger:{trigger:'.tt0',start:'top 60%'}})
-        
 
-            gsap.fromTo(`.z1 , .z2 , .z3 , .z4`,{y:'5',opacity:0},{y:0,opacity:1,stagger:.25,scrollTrigger:{trigger:'.z1',markers:true,start:'top 60%'}})
+        gsap.fromTo('.h00 p', {
+            y: '5',
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.tt1', {
+            y: '5',
+            opacity: 0
+        }, {
+            delay: .15,
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.tt2', {
+            x: '-5',
+            opacity: 0
+        }, {
+            delay: .20,
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.h00 button', {
+            x: '-5',
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0 ',
+                start: 'top 60%'
+            }
+        })
+
+        gsap.fromTo(`.z1 , .z2 , .z3 , .z4`, {
+            y: '5',
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            stagger: .25,
+            scrollTrigger: {
+                trigger: '.z1',
+                start: 'top 60%'
+            }
+        })
     }, [])
-    
+
     return (
         <Box sx={{
             mx: '1em',
@@ -36,6 +89,7 @@ const Reasons = () => {
                     justifyContent: 'left'
                 }}>
                     <Box
+                        className='h00'
                         sx={{
                         maxWidth: {
                             md: '500px'
@@ -73,7 +127,7 @@ const Reasons = () => {
                     </Box>
 
                     <Typography
-                    className='tt1'
+                        className='tt1'
                         sx={{
                         maxWidth: {
                             md: '750px'
@@ -117,9 +171,9 @@ const Reasons = () => {
                     flexWrap: 'wrap',
                     flexDirection: 'row'
                 }}>
-                    {[1,2,3,4].map(n=>{
+                    {[1, 2, 3, 4].map(n => {
 
-                       return <ReasonCard key={n} className={n}/>
+                        return <ReasonCard key={n} className={n}/>
                     })}
                 </Box>
             </Box>

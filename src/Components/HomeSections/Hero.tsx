@@ -17,11 +17,11 @@ const Hero = () => {
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.fromTo('.s1', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.1'})
+        tl.fromTo('.s1 ', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.2'})
         tl.fromTo('.s2',{opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.s3', {opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.t2', {opacity : 0,y:'5'},{y:0,opacity:1},'-=.08')
-        tl.fromTo('.btns button', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.20})
+        tl.fromTo('.btns ', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.3})
     },[])
     return (
         <Box sx={{
@@ -48,6 +48,7 @@ const Hero = () => {
                         fontWeight: 'bolder',
                         display: 'flex',
                         flexWrap: 'wrap',
+                        
                         justifyContent: 'center',
                         fontSize: {
                             xs: '2.9em',
@@ -68,6 +69,8 @@ const Hero = () => {
                         en='Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.'
                         ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا'
                         sx={{
+                        opacity:0,
+
                         maxWidth: '640px',
                         margin: '0em auto',
                         color: '#000000b8',
@@ -83,6 +86,8 @@ const Hero = () => {
                     <Box
                         className='btns'
                         sx={{
+                        opacity:0,
+
                         mt: '2em',
                         gap: '.7em',
                         flexWrap: 'wrap',
