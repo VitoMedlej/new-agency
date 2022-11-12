@@ -1,16 +1,12 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
 import { useEffect } from 'react';
-import Dots from '../Desgin/Dots';
 import {lang} from '../Navbar/Navbar';
 import gsap from 'gsap';
 import Typo from '../Typography/Typo';
 
 
-const ani = {
-    opacity : 0,
 
-}
 const Hero = () => {
     const router = useRouter()
     const {l} = router.query;

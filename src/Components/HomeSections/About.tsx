@@ -7,9 +7,7 @@ import gsap from 'gsap';
 
 const content = [
     {
-        en: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quidem labore ' +
-                'eveniet facere aspernatur blanditiis dolorem eligendi consectetur, atque consequ' +
-                'atur deserunt et sed facilis repellendus!',
+        en: 'sfasfasfasf asfasf ',
         ar: ' ارسله معنا غدا يرتع ويلعب وانا له لحافظون  ارسله معنا غدا يرتع ويلعب وانا له لح' +
                 'افظون ارسله معنا غدا يرتع ويلعب وانا له لحافظون ارسله معنا غدا يرتع ويلعب وانا ل' +
                 'ه لحافظون'
@@ -162,7 +160,6 @@ const About = () => {
                         right: lang('-6%', '85%', l)
                     }}>
                         <Box className='sb1'>
-                            {/* <Box className='sb2'/> */}
                         </Box>
                     </Box>
                 </Box>
