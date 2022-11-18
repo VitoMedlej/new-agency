@@ -24,20 +24,8 @@ function MyApp({Component, pageProps} : AppProps) {
     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
     const [language,
         setLanguage] = useState('en');
-    const router = useRouter();
-    const {l} = router.query;
-    useEffect(() => {
-        if (l === language) {
-            localStorage.setItem('l', l)
-            setLanguage(l)
-        }
-    }, [l])
-    useEffect(() => {
-        const lang = localStorage.getItem('l')
-        if (lang !== language) {
-            setLanguage(lang)
-        }
-    }, [])
+
+  
 
     return <ThemeProvider theme={theme}>
         <LangContext.Provider

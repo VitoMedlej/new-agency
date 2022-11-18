@@ -1,14 +1,15 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React, {useEffect} from 'react'
+import React, {useContext, useEffect} from 'react'
 import ReasonCard from '../Cards/ReasonCard';
 import {lang} from '../Navbar/Navbar';
 import Typo from '../Typography/Typo';
 import gsap from 'gsap';
+import { LangContext } from '../../../pages/_app';
 
 const Reasons = () => {
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
 
     useEffect(() => {
 
@@ -113,6 +114,7 @@ const Reasons = () => {
                         }}/>
 
                         <Button
+                          onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
                             sx={{
                             mt: {
                                 md: '1em'
@@ -161,6 +163,7 @@ const Reasons = () => {
                             md: 'none'
                         }
                     }}
+                    onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
                         className='btn b1 tt2'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
 
                 </Box>

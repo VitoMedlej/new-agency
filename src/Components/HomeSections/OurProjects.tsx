@@ -1,10 +1,11 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router'
-import React, {useEffect} from 'react'
+import React, {useContext, useEffect} from 'react'
 import ProjectCard from '../Cards/ProjectCard'
 import {lang} from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
 import gsap from 'gsap'
+import { LangContext } from '../../../pages/_app'
 
 const projects = [
     {
@@ -14,12 +15,12 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VI124TOZ',
+        title: 'THE VI12124TOZ',
         img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VI124TOZ',
+        title: 'THE VI1214TOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -65,8 +66,8 @@ const projects = [
     }
 ]
 const OurProjects = () => {
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
     
     useEffect(() => {
 
@@ -149,6 +150,8 @@ const OurProjects = () => {
                 })
 }
 
+
+            </Box>
                 <Button
                     className='btn b1'
                     sx={{
@@ -157,8 +160,6 @@ const OurProjects = () => {
                 }}>
                     {lang('Show More', ' مشاريعنا', `${l}`)}
                 </Button>
-
-            </Box>
         </Box>
     )
 }

@@ -1,9 +1,10 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Dots from '../Desgin/Dots';
 import {lang} from '../Navbar/Navbar';
 import gsap from 'gsap';
+import { LangContext } from '../../../pages/_app';
 
 const content = [
     {
@@ -22,7 +23,8 @@ const content = [
 ]
 const About = () => {
     const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
     useEffect(() => {
 
         gsap.to('.about-img div',{duration:1.2,delay:1,width:'100%',scrollTrigger : {

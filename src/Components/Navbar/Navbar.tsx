@@ -1,8 +1,9 @@
 import {Box, Button, Typography} from '@mui/material'
 import {INavbar} from '../../Types'
 import {DragHandle} from '@mui/icons-material';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import router, { useRouter } from 'next/router';
+import { useContext, useEffect } from 'react';
+import { LangContext } from '../../../pages/_app';
 
 
 
@@ -13,18 +14,8 @@ export const lang = (en:string,ar : string,language ?: string  | string[]) => {
     return en
 }
 const Navbar = ({animateMenu} : INavbar) => {
-    const router = useRouter();
-    
-    const language = `${router.query.l}`;
-    useEffect(() => {
-      
-    if (language) {
-        localStorage.setItem('language', `${language}`);
-        return;
-    } 
-    localStorage.setItem('language', 'en');
-      
-    }, [language])
+    const {l,setLanguage} = useContext(LangContext)
+  
  
     return (
         <Box
@@ -39,7 +30,7 @@ const Navbar = ({animateMenu} : INavbar) => {
                 height: '100%',
                 padding: '1em',
                 justifyContent: 'space-between',
-                flexDirection: lang('row','row-reverse',language)
+                flexDirection: lang('row','row-reverse',l)
             }}
                 className="mw">
                 <Box sx={{width:'100px'}} className='center '>
@@ -47,16 +38,18 @@ const Navbar = ({animateMenu} : INavbar) => {
                 </Box>
                 <Box
                 sx={{
-                    flexDirection : lang('row','row-reverse',language)
+                    flexDirection : lang('row','row-reverse',l)
                 }} className='center '>
                     <Button sx={{
                         mx: '1em'
                     }}>
 
                         <Typography 
-                        onClick={()=> router.push(`${router.pathname}?l=` + lang('ar','en',language))}
+                        onClick={()=>{setLanguage(lang('ar','en',l)); 
+                        
+                        router.push(`${router.pathname}?l=` + lang('ar','en',l))}}
                         className='cursor' color='black'>
-                            {lang('العربية','English',language)}
+                            {lang('العربية','English',l)}
                         </Typography>
                     </Button>
                     <DragHandle

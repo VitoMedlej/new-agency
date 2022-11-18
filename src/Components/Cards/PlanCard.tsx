@@ -1,5 +1,7 @@
 import {Box, Button, ListItem} from '@mui/material'
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
+import { LangContext } from '../../../pages/_app';
 import { MultiLang } from '../../Types';
 import { lang } from '../Navbar/Navbar';
 import Typo from '../Typography/Typo';
@@ -22,8 +24,8 @@ const PlanCard = ({
     ,planFeatures
 }
 :PlanCard) => {
-    const router = useRouter();
-    const {l} = router.query;
+      
+        const {l} = useContext(LangContext)
     return (
         <Box
             sx={{

@@ -6,8 +6,10 @@ import Dots from '../../Desgin/Dots';
 import { INavbar } from '../../../Types';
 import Typo from '../../Typography/Typo';
 import { lang } from '../Navbar';
-import { useRouter } from 'next/router';
+import router, { useRouter } from 'next/router';
 import gsap from 'gsap';
+import { useContext } from 'react';
+import { LangContext } from '../../../../pages/_app';
 
 
 const links = 
@@ -31,8 +33,8 @@ const links =
 ]
 const Menu = ({animateMenu } : INavbar) => {
 
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
 
     return (
         <Box
@@ -163,6 +165,7 @@ const Menu = ({animateMenu } : INavbar) => {
 
                     {links.map(link => {
                         return  <Typography
+                        component='p'
                             onClick={()=>{
                                 animateMenu('0%','-150%',true);
                           if (link.href.includes('#')) {
@@ -175,7 +178,8 @@ const Menu = ({animateMenu } : INavbar) => {
                         
                         }}
                         key={link.href}>
-                            <Typo en={link.title.en} ar={link.title.ar} />
+                            {lang(link.title.en,link.title.ar,l)}
+                            {/* <Typo en={} ar={link.title.ar} /> */}
                         </Typography>
                     })
 }
