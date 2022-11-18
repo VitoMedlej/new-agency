@@ -8,18 +8,18 @@ import gsap from 'gsap'
 
 const projects = [
     {
-        title: 'THE VITOZ',
+        title: 'THE V214ITOZ',
 
         img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VITOZ',
+        title: 'THE VI124TOZ',
         img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VITOZ',
+        title: 'THE VI124TOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -30,7 +30,7 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VITOZ',
+        title: 'THE 124VITOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -41,7 +41,7 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VITOZ',
+        title: 'THE V124124ITOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -52,7 +52,7 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VITOZ',
+        title: 'THE VI124124TOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -67,7 +67,7 @@ const projects = [
 const OurProjects = () => {
     const router = useRouter();
     const {l} = router.query;
-
+    
     useEffect(() => {
 
         gsap.fromTo('.tt01 p  ', {
@@ -112,6 +112,7 @@ const OurProjects = () => {
 
     return (
         <Box
+            id='portfolio'
             className='mw'
             sx={{
             pt: '10em',

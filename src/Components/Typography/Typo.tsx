@@ -1,5 +1,7 @@
 import {Box, Typography} from '@mui/material'
 import {useRouter} from 'next/router'
+import { useContext, useEffect } from 'react';
+import { LangContext } from '../../../pages/_app';
 import {lang} from '../Navbar/Navbar'
 
 interface ITypo {
@@ -10,10 +12,10 @@ interface ITypo {
 
 }
 const Typo = ({en, ar,sx,className} : ITypo) => {
-
-    const router = useRouter()
-    const {l} = router.query
-
+    const values = useContext(LangContext)
+    const l = 'en'
+    console.log('values: ', values);
+    
     return (
         <Typography 
         sx={{

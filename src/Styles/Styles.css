@@ -76,8 +76,8 @@ body {
 }
 .menu-links p {
   transition: all 0.5s ease;
-  font-size: 3em;
-  padding: 0.25em 0;
+  font-size: 1.75em;
+  padding: 0.175em 0;
   font-weight: 800;
   cursor: pointer;
   color: white;

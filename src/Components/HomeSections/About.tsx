@@ -55,6 +55,7 @@ const About = () => {
     },[])
     return (
         <Box
+        id='about'
             sx={{
             my: '10em',
             mx: '1em',
