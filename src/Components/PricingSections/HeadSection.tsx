@@ -1,11 +1,13 @@
 import { Box, Button } from '@mui/material'
 import { useRouter } from 'next/router'
+import { useContext } from 'react'
+import { LangContext } from '../../../pages/_app'
 import { lang } from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
 
 const HeadSection = () => {
-    const router = useRouter()
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
   return (
     <Box sx={{
         position: 'relative',

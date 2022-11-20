@@ -12,9 +12,8 @@ interface ITypo {
 
 }
 const Typo = ({en, ar,sx,className} : ITypo) => {
-    const values = useContext(LangContext)
-    const l = 'en'
-    console.log('values: ', values);
+    const {l} = useContext(LangContext)
+    
     
     return (
         <Typography 

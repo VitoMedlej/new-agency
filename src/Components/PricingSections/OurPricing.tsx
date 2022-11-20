@@ -1,6 +1,7 @@
 import {Box, Button} from '@mui/material'
 import {useRouter} from 'next/router';
-import React from 'react'
+import React, { useContext } from 'react'
+import { LangContext } from '../../../pages/_app';
 import PlanCard from '../Cards/PlanCard';
 import {lang} from '../Navbar/Navbar';
 import Typo from '../Typography/Typo'
@@ -92,8 +93,8 @@ const plans = [
 ]
 
 const OurPricing = () => {
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
     return (
         <Box
             className='mw'

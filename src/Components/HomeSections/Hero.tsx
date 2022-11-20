@@ -1,15 +1,15 @@
 import {Box, Button, Typography} from '@mui/material'
-import {useRouter} from 'next/router';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import {lang} from '../Navbar/Navbar';
 import gsap from 'gsap';
 import Typo from '../Typography/Typo';
+import { LangContext } from '../../../pages/_app';
 
 
 
 const Hero = () => {
-    const router = useRouter()
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
 
     useEffect(() => {
         const tl = gsap.timeline()
@@ -54,11 +54,11 @@ const Hero = () => {
                             xl: '7.5em'
                         }
                     }}>
-                        <span className='s1'>{lang('Beirut', 'رخيص', `${l}`)}</span>
+                        <span className='s1'>{lang('Simple', '  بيروت ', `${l}`)}</span>
                         &nbsp;
-                        <span className='clr s2'>{lang('Web', 'ويب', `${l}`)}</span>
+                        <span className='clr s2'>{lang('Beirut', 'ويب', `${l}`)}</span>
                         &nbsp;
-                        <span className='s3'>{lang('Affordable', ' بيروت', `${l}`)}</span>
+                        <span className='s3'>{lang('Web', ' بسيط', `${l}`)}</span>
                     </Typography>
                     <Typo
                     className='t2'
@@ -90,8 +90,12 @@ const Hero = () => {
                         display: 'flex',
                         justifyContent: 'center'
                     }}>
-                        <Button className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
-                        <Button className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                        <Button 
+                        onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})} 
+                        className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                        <Button 
+                        onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#portfolio'})}
+                        className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                         </Button>
                     </Box>
                 </Box>

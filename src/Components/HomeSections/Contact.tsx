@@ -1,10 +1,11 @@
 import {Box, Button, TextField} from '@mui/material'
 import {useRouter} from 'next/router'
-import React, {useRef, useState} from 'react'
+import React, {useContext, useRef, useState} from 'react'
 import Dots from '../Desgin/Dots'
 import {lang} from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
 import emailjs from '@emailjs/browser';
+import { LangContext } from '../../../pages/_app'
 
 const Contact = () => {
     const form = useRef();
@@ -12,8 +13,9 @@ const Contact = () => {
         setDetails] = useState({status: 0, error: ''})
     const [email,
         setEmail] = useState('')
-    const router = useRouter();
-    const {l} = router.query;
+  
+    const {l} = useContext(LangContext)
+
     const sendEmail = async(e : any) => {
         setDetails({status: 0, error: ''})
 
