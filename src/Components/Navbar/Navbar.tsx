@@ -34,7 +34,7 @@ const Navbar = ({animateMenu} : INavbar) => {
             }}
                 className="mw">
                 <Box sx={{width:'100px'}} className='center '>
-                     <img className='img' src="/bwa.JPG" alt="BWA logo" />
+                     <img className='img' src="/logo01.JPG" alt="BWA logo" />
                 </Box>
                 <Box
                 sx={{

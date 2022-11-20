@@ -54,11 +54,11 @@ const Hero = () => {
                             xl: '7.5em'
                         }
                     }}>
-                        <span className='s1'>{lang('Beirut', 'رخيص', `${l}`)}</span>
+                        <span className='s1'>{lang('Simple', '  بيروت ', `${l}`)}</span>
                         &nbsp;
-                        <span className='clr s2'>{lang('Web', 'ويب', `${l}`)}</span>
+                        <span className='clr s2'>{lang('Beirut', 'ويب', `${l}`)}</span>
                         &nbsp;
-                        <span className='s3'>{lang('Affordable', ' بيروت', `${l}`)}</span>
+                        <span className='s3'>{lang('Web', ' بسيط', `${l}`)}</span>
                     </Typography>
                     <Typo
                     className='t2'
