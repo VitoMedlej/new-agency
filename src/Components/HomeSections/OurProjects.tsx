@@ -14,12 +14,12 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VI124TOZ',
+        title: 'THE VI12124TOZ',
         img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VI124TOZ',
+        title: 'THE VI124T21OZ',
         sx: {
             display: {
                 xs: 'none',
@@ -30,7 +30,7 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE 124VITOZ',
+        title: 'THE 124V214ITOZ',
         sx: {
             display: {
                 xs: 'none',
@@ -52,7 +52,7 @@ const projects = [
                 '1.jpg',
         href: 'https://home.com'
     }, {
-        title: 'THE VI124124TOZ',
+        title: 'THE 125125125tq',
         sx: {
             display: {
                 xs: 'none',
