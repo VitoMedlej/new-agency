@@ -126,8 +126,9 @@ const OurProjects = () => {
             }}>
                 <Typo className='h1' en='Our Latest Work' ar='اخر مشاريعي اتاا'/>
                 <Typo
+                    className='tt1'
                     sx={{
-                    fontSize: '1.5em',
+                    // fontSize: '1.5em',
                     color: '#000000b8'
                 }}
                     en='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'

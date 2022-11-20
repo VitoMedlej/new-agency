@@ -7,7 +7,7 @@ import Typo from '../Typography/Typo';
 const Reasons = [
     {
         title: {
-            en: 'The Cheapest',
+            en: '1',
             ar: 'الارخص'
         },
         text: {
@@ -17,7 +17,7 @@ const Reasons = [
         img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
     }, {
         title: {
-            en: 'The Cheapest',
+            en: '2',
             ar: 'الارخص'
         },
         text: {
@@ -27,7 +27,7 @@ const Reasons = [
         img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
     }, {
         title: {
-            en: 'The Cheapest',
+            en: '3',
             ar: 'الارخص'
         },
         text: {
@@ -38,7 +38,7 @@ const Reasons = [
     }, {
         img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
         title: {
-            en: 'The Cheapest',
+            en: '4',
             ar: 'الارخص'
         },
         text: {

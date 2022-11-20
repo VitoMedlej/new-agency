@@ -53,7 +53,7 @@ const HeadSection = () => {
                     sx={{
                     maxWidth: '640px',
                     margin: '0em auto',
-                    color: '#ffffff91',
+                    color: '#ffffffc9',
                     fontWeight: '400',
                     fontSize: {
                         xs: '.9em',
@@ -74,13 +74,13 @@ const HeadSection = () => {
                 }}>
                     <Button 
                     sx={{color:'#6000a9 !important',background:'white !important'}}
-                    className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                    className='btn '>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
                     <Button 
                     sx={{
                         border: '1px solid white !important',
                         color: 'white !important',
                     }}
-                    className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                    className='btn '>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                     </Button>
                 </Box>
             </Box>

@@ -37,7 +37,7 @@ const ReasonCard = ({className}:any) => {
                 <img src="https://www.svgrepo.com/show/428104/browser.svg" alt="" />
             </Box>
             <Box>
-                <Typography sx={{color:'#2f2f2f',pb:'.25em',fontSize:'2em'}}>
+                <Typography sx={{color:'#2f2f2f',pb:'.15em',fontSize:'2em'}}>
                     {lang('Title hello', 'اسم', l)}
                 </Typography>
                 <Typography

@@ -86,12 +86,13 @@ const About = () => {
                         textAlign: lang('left', 'right', l)
                     }
                 }}>
-                    <Typography className='h1 t3'>
+                    <Typography sx={{opacity:0}} className='h1 t3'>
                         {lang('Who We Are', 'من نحن؟', l)}
                     </Typography>
                     <Typography
                     className='t4'
                         sx={{
+                            opacity:0,
                         fontSize: {
                             xs: '1em',
                             lg: '1.2em'
@@ -107,6 +108,8 @@ const About = () => {
                     className='t5'
 
                         sx={{
+                            opacity:0,
+
                         fontWeight: '500',
                         fontSize: {
                             xs: '1em',
@@ -138,7 +141,8 @@ const About = () => {
                         xl: '600px'
                     },
                     height: {
-                        sm: '270px',
+ 
+                        xs: '270px',
                         md: '300px'
                     },
                     position: 'relative'
