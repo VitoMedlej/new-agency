@@ -40,7 +40,7 @@ const Layout = ({title, children, description} : ILayout) => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link
                     rel="shortcut icon"
-                    href="https://res.cloudinary.com/dwcu3wcol/image/upload/v1666363512/logo_mdwklh.jpg"/>
+                    href="./icon01.PNG"/>
 
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>

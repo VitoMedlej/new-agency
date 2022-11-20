@@ -33,8 +33,8 @@ const Navbar = ({animateMenu} : INavbar) => {
                 flexDirection: lang('row','row-reverse',l)
             }}
                 className="mw">
-                <Box sx={{width:'100px'}} className='center '>
-                     <img className='img' src="/logo01.JPG" alt="BWA logo" />
+                <Box sx={{width:{xs:'100px',sm:'130px'}}} className='center '>
+                     <img className='img' src="/logo04.JPG" alt="BWA logo" />
                 </Box>
                 <Box
                 sx={{

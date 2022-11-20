@@ -6,7 +6,8 @@ import {ThemeProvider, createTheme} from '@mui/material/styles';
 import gsap from 'gsap';
 import {ScrollToPlugin} from "gsap/dist/ScrollToPlugin";
 import {createContext, useEffect, useState} from 'react';
-import {useRouter} from 'next/router';
+
+
 export const LangContext = createContext < {
     l: string,
     setLanguage: any
