@@ -1,17 +1,82 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import ReasonCard from '../Cards/ReasonCard';
 import {lang} from '../Navbar/Navbar';
+import Typo from '../Typography/Typo';
+import gsap from 'gsap';
+import { LangContext } from '../../../pages/_app';
 
 const Reasons = () => {
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
+
+    useEffect(() => {
+
+        gsap.fromTo('.h00 p', {
+            y: '5',
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.tt1', {
+            y: '5',
+            opacity: 0
+        }, {
+            delay: .15,
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.tt2', {
+            x: '-5',
+            opacity: 0
+        }, {
+            delay: .20,
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0',
+                start: 'top 60%'
+            }
+        })
+        gsap.fromTo('.h00 button', {
+            x: '-5',
+            opacity: 0
+        }, {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.tt0 ',
+                start: 'top 60%'
+            }
+        })
+
+        gsap.fromTo(`.z1 , .z2 , .z3 , .z4`, {
+            y: '5',
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            stagger: .25,
+            scrollTrigger: {
+                trigger: '.z1',
+                start: 'top 60%'
+            }
+        })
+    }, [])
+
     return (
-        <Box
-            sx={{
+        <Box sx={{
             mx: '1em',
-           
             position: 'relative'
         }}>
             <Box className='mw'>
@@ -20,11 +85,12 @@ const Reasons = () => {
                     display: 'flex',
                     flexDirection: {
                         xs: 'column',
-                        md: lang('row','row-reverse',l),
+                        md: lang('row', 'row-reverse', l)
                     },
                     justifyContent: 'left'
                 }}>
                     <Box
+                        className='h00'
                         sx={{
                         maxWidth: {
                             md: '500px'
@@ -35,23 +101,24 @@ const Reasons = () => {
                         }
                     }}>
 
-                        <Typography
-                            className='h1'
+                        <Typo
+                            en='Why Does Your Business Need A Website?'
+                            ar='ليش ضاوري يكون عندك ويب سايت؟'
+                            className='h1 tt0'
                             sx={{
                             fontSize: {
                                 xs: '2.5em',
                                 sm: '3em'
                             },
                             mb: '.4em'
-                        }}>
-                            
+                        }}/>
 
-                            {lang('  Why Does Your Business Need A Website?',
-                        'ليش ضاوري يكون عندك ويب سايت؟', `${l}`)}
-                        </Typography>
                         <Button
+                          onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
                             sx={{
-                                mt:{md:'1em'},
+                            mt: {
+                                md: '1em'
+                            },
                             display: {
                                 xs: 'none',
                                 md: 'flex'
@@ -62,6 +129,7 @@ const Reasons = () => {
                     </Box>
 
                     <Typography
+                        className='tt1'
                         sx={{
                         maxWidth: {
                             md: '750px'
@@ -95,14 +163,21 @@ const Reasons = () => {
                             md: 'none'
                         }
                     }}
-                        className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                    onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
+                        className='btn b1 tt2'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
 
                 </Box>
-                <Box sx={{mt:'4.5em',display:'flex',flexWrap:'wrap',flexDirection:'row'}}>
-                    <ReasonCard/>
-                    <ReasonCard/>
-                    <ReasonCard/>
-                    <ReasonCard/>
+                <Box
+                    sx={{
+                    mt: '4.5em',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flexDirection: 'row'
+                }}>
+                    {[1, 2, 3, 4].map(n => {
+
+                        return <ReasonCard key={n} className={n}/>
+                    })}
                 </Box>
             </Box>
         </Box>

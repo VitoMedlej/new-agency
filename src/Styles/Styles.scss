@@ -82,7 +82,7 @@ $trans : all .5s ease;
     transition : $trans;
             
             font-size: 3em;
-            padding :  .25em 0;
+            padding :  .175em 0;
             font-weight: 800;
             cursor:pointer;
             color:white;
@@ -110,7 +110,7 @@ $trans : all .5s ease;
 }
 .t1 {
     span {
-        opacity: 0;
+        opacity: 0 ;
     }
 }
 .absolute {

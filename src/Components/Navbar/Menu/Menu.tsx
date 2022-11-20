@@ -6,7 +6,10 @@ import Dots from '../../Desgin/Dots';
 import { INavbar } from '../../../Types';
 import Typo from '../../Typography/Typo';
 import { lang } from '../Navbar';
-import { useRouter } from 'next/router';
+import router, { useRouter } from 'next/router';
+import gsap from 'gsap';
+import { useContext } from 'react';
+import { LangContext } from '../../../../pages/_app';
 
 
 const links = 
@@ -16,22 +19,22 @@ const links =
         href: '/'
     }, {
         title: {en:'ABOUT',ar:'من نحن'},
-        href: '/services'
+        href: '#about'
     }, {
         title: {en:'PORTFOLIO',ar:'معرض'},
-        href: '/portfolio'
+        href: '#portfolio'
     }, {
         title: {en:'PRICING',ar:'السعر'},
-        href: '/about'
+        href: '/pricing'
     }, {
         title: {en:'CONTACT',ar:'تواصل معنا'},
-        href: '/pricing'
+        href: '#contact'
     }
 ]
 const Menu = ({animateMenu } : INavbar) => {
 
-    const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
 
     return (
         <Box
@@ -161,9 +164,23 @@ const Menu = ({animateMenu } : INavbar) => {
                 }}>
 
                     {links.map(link => {
-                        return <Link key={link.href} href={`${link.href}`}>
-                            <Typo en={link.title.en} ar={link.title.ar} />
-                        </Link>
+                        return  <Typography
+                        component='p'
+                            onClick={()=>{
+                                animateMenu('0%','-150%',true);
+                          if (link.href.includes('#')) {
+                            router.push('/')      
+                            gsap.to(window,{duration:.8,scrollTo:`${link.href}`})
+                              return
+                            } 
+                            router.push(link.href)      
+                        
+                        
+                        }}
+                        key={link.href}>
+                            {lang(link.title.en,link.title.ar,l)}
+                            {/* <Typo en={} ar={link.title.ar} /> */}
+                        </Typography>
                     })
 }
 

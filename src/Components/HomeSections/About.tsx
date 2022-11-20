@@ -1,15 +1,14 @@
 import {Box, Button, Typography} from '@mui/material'
 import {useRouter} from 'next/router';
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Dots from '../Desgin/Dots';
 import {lang} from '../Navbar/Navbar';
 import gsap from 'gsap';
+import { LangContext } from '../../../pages/_app';
 
 const content = [
     {
-        en: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quidem labore ' +
-                'eveniet facere aspernatur blanditiis dolorem eligendi consectetur, atque consequ' +
-                'atur deserunt et sed facilis repellendus!',
+        en: 'sfasfasfasf asfasf ',
         ar: ' ارسله معنا غدا يرتع ويلعب وانا له لحافظون  ارسله معنا غدا يرتع ويلعب وانا له لح' +
                 'افظون ارسله معنا غدا يرتع ويلعب وانا له لحافظون ارسله معنا غدا يرتع ويلعب وانا ل' +
                 'ه لحافظون'
@@ -24,7 +23,8 @@ const content = [
 ]
 const About = () => {
     const router = useRouter();
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
     useEffect(() => {
 
         gsap.to('.about-img div',{duration:1.2,delay:1,width:'100%',scrollTrigger : {
@@ -35,28 +35,29 @@ const About = () => {
         gsap.fromTo('.t3',{opacity:0,y:'5'},{y:0,opacity:'1',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t4',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.1',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t5',{opacity:0,y:'10'},{y:0,opacity:'1',delay:'.15',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         gsap.fromTo('.t6',{opacity:0,x:'-10'},{x:0,opacity:'1',delay:'.25',scrollTrigger : {
             trigger : '.t3',
             start : 'top 50%',
-            markers : true,
+         
         }})
         
         
     },[])
     return (
         <Box
+        id='about'
             sx={{
             my: '10em',
             mx: '1em',
@@ -162,7 +163,6 @@ const About = () => {
                         right: lang('-6%', '85%', l)
                     }}>
                         <Box className='sb1'>
-                            {/* <Box className='sb2'/> */}
                         </Box>
                     </Box>
                 </Box>

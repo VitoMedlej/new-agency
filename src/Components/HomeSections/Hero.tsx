@@ -1,27 +1,23 @@
 import {Box, Button, Typography} from '@mui/material'
-import {useRouter} from 'next/router';
-import { useEffect } from 'react';
-import Dots from '../Desgin/Dots';
+import { useContext, useEffect } from 'react';
 import {lang} from '../Navbar/Navbar';
 import gsap from 'gsap';
 import Typo from '../Typography/Typo';
+import { LangContext } from '../../../pages/_app';
 
 
-const ani = {
-    opacity : 0,
 
-}
 const Hero = () => {
-    const router = useRouter()
-    const {l} = router.query;
+    const {l} = useContext(LangContext)
+
 
     useEffect(() => {
         const tl = gsap.timeline()
-        tl.fromTo('.s1', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.1'})
+        tl.fromTo('.s1 ', {opacity : 0,y:'10'},{y:0,opacity:1,delay:'.2'})
         tl.fromTo('.s2',{opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.s3', {opacity : 0,y:'10'},{y:0,opacity:1},'-=.15')
         tl.fromTo('.t2', {opacity : 0,y:'5'},{y:0,opacity:1},'-=.08')
-        tl.fromTo('.btns button', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.20})
+        tl.fromTo('.btns ', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.3})
     },[])
     return (
         <Box sx={{
@@ -48,6 +44,7 @@ const Hero = () => {
                         fontWeight: 'bolder',
                         display: 'flex',
                         flexWrap: 'wrap',
+                        
                         justifyContent: 'center',
                         fontSize: {
                             xs: '2.9em',
@@ -57,17 +54,19 @@ const Hero = () => {
                             xl: '7.5em'
                         }
                     }}>
-                        <span className='s1'>{lang('Beirut', 'رخيص', `${l}`)}</span>
+                        <span className='s1'>{lang('Simple', '  بيروت ', `${l}`)}</span>
                         &nbsp;
-                        <span className='clr s2'>{lang('Web', 'ويب', `${l}`)}</span>
+                        <span className='clr s2'>{lang('Beirut', 'ويب', `${l}`)}</span>
                         &nbsp;
-                        <span className='s3'>{lang('Affordable', ' بيروت', `${l}`)}</span>
+                        <span className='s3'>{lang('Web', ' بسيط', `${l}`)}</span>
                     </Typography>
                     <Typo
                     className='t2'
                         en='Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.'
                         ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا'
                         sx={{
+                        opacity:0,
+
                         maxWidth: '640px',
                         margin: '0em auto',
                         color: '#000000b8',
@@ -83,14 +82,20 @@ const Hero = () => {
                     <Box
                         className='btns'
                         sx={{
+                        opacity:0,
+
                         mt: '2em',
                         gap: '.7em',
                         flexWrap: 'wrap',
                         display: 'flex',
                         justifyContent: 'center'
                     }}>
-                        <Button className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
-                        <Button className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                        <Button 
+                        onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})} 
+                        className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                        <Button 
+                        onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#portfolio'})}
+                        className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                         </Button>
                     </Box>
                 </Box>
