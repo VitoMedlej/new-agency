@@ -29,7 +29,8 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
             padding: '.25em',
         }}>
             <img
-                className='img'
+                
+                className='img '
                 src="https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-8789581.jpg"
                 alt=""/>
             <Typography

@@ -33,7 +33,9 @@ const Navbar = ({animateMenu} : INavbar) => {
                 flexDirection: lang('row','row-reverse',l)
             }}
                 className="mw">
-                <Box sx={{width:{xs:'100px',sm:'130px'}}} className='center '>
+                <Box sx={{cursor:'pointer',width:{xs:'100px',sm:'130px'}}}
+                    onClick={()=>router.push('/')}
+                className='center '>
                      <img className='img' src="/logo04.JPG" alt="BWA logo" />
                 </Box>
                 <Box

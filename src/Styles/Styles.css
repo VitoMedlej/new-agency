@@ -47,17 +47,21 @@ body {
 }
 
 .b1 {
-  color: white;
-  border: 1px solid #6000a9;
-  background: #6000a9;
+  color: white !important;
+  border: 1px solid #6000a9 !important;
+  border-radius: 0 !important;
+  background: #6000a9 !important;
 }
 .b1:hover {
-  color: #6000a9;
+  background: white !important;
+  color: #6000a9 !important;
+  border: 1px solid #6000a9 !important;
 }
 
 .b2 {
-  color: #6000a9;
-  border-color: #6000a9;
+  color: #6000a9 !important;
+  border-color: #6000a9 !important;
+  border-radius: 0 !important;
 }
 
 .img {
@@ -130,7 +134,7 @@ body {
   height: "2px";
   background: black;
   top: 50%;
-  right: 0%;
+  right: 0;
 }
 
 .dotted {
@@ -145,8 +149,8 @@ body {
 }
 
 .h1 {
-  font-size: 2.5em;
-  font-weight: 700;
+  font-size: 2.5em !important;
+  font-weight: 700 !important;
 }
 
 .style-box {
