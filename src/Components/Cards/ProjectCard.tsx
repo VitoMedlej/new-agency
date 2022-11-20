@@ -40,7 +40,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
             }}>
                 {data.title}
             </Typography>
-            <a href='/'>
+            <a href='https://github.com/VitoMedlej/new-agency'>
             {data.href}
 
             </a>

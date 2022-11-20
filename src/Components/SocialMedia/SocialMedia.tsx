@@ -15,17 +15,17 @@ const SocialMedia = (sx : any) => {
             justifyContent: 'center',
             pt: '1em'
         }}>
-            <a href='/' className=' ins'>
+            <a href='https://github.com/VitoMedlej/new-agency' rel="noreferrer" target="_blank" className=' ins'>
                 <InstagramIcon fontSize='large'/>
             </a>
-            <a href='/' target='_blank' className=' fb'>
+            <a href='https://github.com/VitoMedlej/new-agency' rel="noreferrer" target='_blank' className=' fb'>
                 <FacebookOutlinedIcon fontSize='large'/>
             </a>
-            <a href='/' target='_blank' className=' wts'>
+            <a href='https://github.com/VitoMedlej/new-agency' rel="noreferrer" target='_blank' className=' wts'>
                 <WhatsAppIcon fontSize='large'/>
             </a>
 
-            <a href='/' target='_blank' className=' phn'>
+            <a href='https://github.com/VitoMedlej/new-agency' rel="noreferrer" target='_blank' className=' phn'>
                 <LocalPhoneIcon fontSize='large'/>
             </a>
 
