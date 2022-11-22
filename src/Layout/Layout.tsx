@@ -1,14 +1,15 @@
 import {Box, Button, Drawer, IconButton} from "@mui/material";
 import Head from "next/head";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import Footer from "../Components/Footer/Footer";
 import Menu from "../Components/Navbar/Menu/Menu";
-import Navbar from "../Components/Navbar/Navbar";
+import Navbar, { lang } from "../Components/Navbar/Navbar";
 import {ILayout} from "../Types";
 import gsap from 'gsap';
+import { LangContext } from "../../pages/_app";
 
 const Layout = ({title, children, description} : ILayout) => {
-   
+        const {l} = useContext(LangContext)
         const animateMenu = (from: string, to : string,hide:boolean) => {
             const tl = gsap.timeline();
             if (!hide) {
@@ -36,7 +37,9 @@ const Layout = ({title, children, description} : ILayout) => {
 
         <div>
             <Head>
-                <title>{title || 'My page title'}</title>
+                <title>{
+                    lang(title.en,title.ar,l)
+                    }</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link
                     rel="shortcut icon"

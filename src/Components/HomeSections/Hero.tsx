@@ -54,20 +54,19 @@ const Hero = () => {
                             xl: '7.5em'
                         }
                     }}>
-                        <span className='s1'>{lang('Simple', '  بيروت ', `${l}`)}</span>
+                        <span className='s1'>{lang('Simple', 'البسيط   ', `${l}`)}</span>
                         &nbsp;
                         <span className='clr s2'>{lang('Beirut', 'ويب', `${l}`)}</span>
                         &nbsp;
-                        <span className='s3'>{lang('Web', ' بسيط', `${l}`)}</span>
+                        <span className='s3'>{lang('Web', '  بيروت', `${l}`)}</span>
                     </Typography>
                     <Typo
                     className='t2'
-                        en='Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.'
-                        ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا'
+                        en='The most affordable web development agency in lebanon. Get a full website for your business for the price of a T-shirt within a week!'
+                        ar=' اوفر شركة تطوير وب سايت في لبنان احصل على موقع\متجر الكتروني لشغلك بسعر بسيط خلال اسبوع وبس ' 
                         sx={{
                         opacity:0,
-
-                        maxWidth: '640px',
+                        maxWidth: '700px',
                         margin: '0em auto',
                         color: '#000000b8',
                         fontWeight: '400',
@@ -92,10 +91,10 @@ const Hero = () => {
                     }}>
                         <Button 
                         onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})} 
-                        className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                        className='btn b1'>{lang('GET A LIFE TIME DEAL', 'احصل على موقع خاص ', `${l}`)}</Button>
                         <Button 
                         onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#portfolio'})}
-                        className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                        className='btn b2'>{lang('OUR PROJECTS', ' مشاريعنا', `${l}`)}
                         </Button>
                     </Box>
                 </Box>

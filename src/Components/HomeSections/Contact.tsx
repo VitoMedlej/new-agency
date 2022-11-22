@@ -7,6 +7,12 @@ import Typo from '../Typography/Typo'
 import emailjs from '@emailjs/browser';
 import { LangContext } from '../../../pages/_app'
 
+
+const contacts = [
+    {title : {en:'Email',ar : 'ايميل'}
+
+}
+]
 const Contact = () => {
     const form = useRef();
     const [details,
@@ -55,10 +61,21 @@ const Contact = () => {
             },
             position: 'relative'
         }}>
+              <Dots
+                        sx={{
+                        top: '-23%',
+                        left: '-5%',
+                        display: {
+                            xs: 'block',
+                            md: 'none'
+                        }
+                    }}
+                        color='#6000a9'/>
             <Box
+            
                 sx={{
                 display: 'flex',
-                flexDirection: lang('row-reverse', 'row', l),
+                flexDirection:{xs:'column-reverse', md:lang('row-reverse', 'row', l)},
                 justifyContent: {
                     xs: 'center',
                     md: 'space-between'
@@ -69,25 +86,38 @@ const Contact = () => {
                 <Box
                     sx={{
                     position: 'relative',
-                    width: '57%',
-                    display: {
-                        xs: 'none',
-                        md: 'block'
-                    }
+                    width: {md:'57%'},
+                    
                 }}>
                     <Dots
                         sx={{
                         top: '-23%',
-                        left: '-5%'
+                        left: '-5%',
+                        display: {
+                            xs: 'none',
+                            md: 'block'
+                        }
                     }}
                         color='#6000a9'/>
+                <Box
+                sx={{display: {
+                    xs: 'none',
+                    md: 'block'
+                }}}
+                >
 
                     <img
                         className='img'
                         src="https://images.pexels.com/photos/7792770/pexels-photo-7792770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt=""/>
-                    <Box className='mw'>
-                        faksfasf
+                        </Box>
+                    <Box className='mw' sx={{justifyContent:'center',mt:'1.5em'}}>
+                        
+                    <Box sx={{display:'flex',gap:'.5em'}}>
+                        <Typo en='Email:' sx={{fontWeight:'600'}}/>
+                        <Typo en='simplebeirutweb@gmail.com' />
+                    </Box>
+                 
                     </Box>
                 </Box>
                 <Box
@@ -98,7 +128,7 @@ const Contact = () => {
                         xs: 'center',
                         md: lang('baseline', 'end', l)
                     },
-                    padding: '1em',
+                    // padding: '1em',
                     width: {
                         xs: '100%',
                         md: '43%'

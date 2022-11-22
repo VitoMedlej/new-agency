@@ -8,17 +8,24 @@ import { LangContext } from '../../../pages/_app';
 
 const content = [
     {
-        en: 'sfasfasfasf asfasf ',
-        ar: ' ارسله معنا غدا يرتع ويلعب وانا له لحافظون  ارسله معنا غدا يرتع ويلعب وانا له لح' +
-                'افظون ارسله معنا غدا يرتع ويلعب وانا له لحافظون ارسله معنا غدا يرتع ويلعب وانا ل' +
-                'ه لحافظون'
+        en: `Simple beirut web is a web development agency based in 
+        lebanon aimed help businesses and individuls grow. Getting a website/web app
+        with good SEO is the our main focus while keeping the costs extremely low to satisfy all budgets. 
+        `,
+        ar: `
+        
+          مواسسة بيروت ويب بسيط هي وكالة تطوير ويب مقرها  
+        لبنان  يهدف إلى مساعدة الشركات والأفراد على النمو. الحصول على موقع ويب / تطبيق ويب
+          مع تحسين محركات البحث الجيدة هو تركيزنا الرئيسي مع إبقاء التكاليف منخفضة للغاية لتلبية جميع الميزانيات
+        `
     }, {
-        en: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quidem labore ' +
-                'eveniet facere aspernatur blanditiis dolorem eligendi consectetur, atque consequ' +
-                'atur deserunt et sed facilis repellendus!',
-        ar: ' ارسله معنا غدا يرتع ويلعب وانا له لحافظون  ارسله معنا غدا يرتع ويلعب وانا له لح' +
-                'افظون ارسله معنا غدا يرتع ويلعب وانا له لحافظون ارسله معنا غدا يرتع ويلعب وانا ل' +
-                'ه لحافظون'
+        en: `We are relativly small but our goals and ambitions are big, therefore you can rely and trust us 
+        with your projects and ideas and we surely won't disappoint. We also believe in ideal customer service so contact us
+        right now and test how fast our response time is. 
+
+        `,
+        ar: `
+        نحن صغيرون نسبيًا ولكن أهدافنا وطموحاتنا كبيرة ، لذلك يمكنك الاعتماد علينا والثقة بنا في مشاريعك وأفكارك ، ولن نخيب آمالنا بالتأكيد. نحن نؤمن أيضًا بخدمة العملاء المثالية ، لذا اتصل بنا الآن واختبر مدى سرعة وقت استجابتنا.`
     }
 ]
 const About = () => {
@@ -119,7 +126,9 @@ const About = () => {
                         {lang(content[1].en, content[1].ar, l)}
                     </Typography>
 
-                    <Button className='btn b2 t6'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                    <Button 
+                    onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
+                    className='btn b2 t6'>{lang('Contact Us ', ' تواصل معنا', `${l}`)}
                     </Button>
 
                 </Box>
