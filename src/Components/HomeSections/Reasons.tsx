@@ -7,6 +7,17 @@ import Typo from '../Typography/Typo';
 import gsap from 'gsap';
 import { LangContext } from '../../../pages/_app';
 
+
+
+const rsns = [
+    {
+        img : 'https://www.svgrepo.com/show/367414/cred.svg',
+        title : {en:'Credibility',ar:"الثقة"}
+        ,text : {en:'Having a website proves to customers that you are a real business.'
+              , ar : ' الموقع بيعطي الناس احساس بمصداقية تجارتك وثقة فيك'
+    }
+    }
+]
 const Reasons = () => {
     const {l} = useContext(LangContext)
 
@@ -124,7 +135,7 @@ const Reasons = () => {
                                 md: 'flex'
                             }
                         }}
-                            className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                            className='btn b1'>{lang('Our Services', ' خدماتنا', `${l}`)}</Button>
 
                     </Box>
 
@@ -148,9 +159,8 @@ const Reasons = () => {
                             lg: '1.5em'
                         }
                     }}>
-                        {lang('  Web design? web development? doesnt matter! Get your effective website today f' +
-                                'or a price of a t-shirt.',
-                        'تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا', `${l}`)}
+                        {lang('Having a high quality website is crucial for any business that aims to get clients and generate more revenue.',
+                        '.اذا كان هدفك تجيب ذباين وتزيد الارباح يعني بدون شك لازمك موقع جودته عالية', `${l}`)}
                     </Typography>
                     <Button
                         sx={{
@@ -164,7 +174,7 @@ const Reasons = () => {
                         }
                     }}
                     onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
-                        className='btn b1 tt2'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                        className='btn b1 tt2'>{lang('Our Services', ' خدماتنا', `${l}`)}</Button>
 
                 </Box>
                 <Box
@@ -172,11 +182,12 @@ const Reasons = () => {
                     mt: '4.5em',
                     display: 'flex',
                     flexWrap: 'wrap',
-                    flexDirection: 'row'
+                    flexDirection: 'row',
+                    justifyContent: lang('left','right',l)
                 }}>
-                    {[1, 2, 3, 4].map(n => {
+                    {rsns.map((reason,idx:number) => {
 
-                        return <ReasonCard key={n} className={n}/>
+                        return <ReasonCard key={reason.title.en} title={reason.title} img={reason.img} text={reason.text} className={idx}/>
                     })}
                 </Box>
             </Box>

@@ -9,6 +9,12 @@ export interface ILayout {
 export interface INavbar {
     animateMenu : (from: string , to: string, hide:boolean) => void
 }
+export interface IReasonCard {
+    title : MultiLang;
+    img : string;
+    text : MultiLang;
+    className : number;
+}
 export interface IContactBox {
     t1: string;
     t2: string;

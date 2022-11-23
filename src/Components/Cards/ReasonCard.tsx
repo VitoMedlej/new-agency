@@ -1,18 +1,18 @@
 import {Box, Typography} from "@mui/material"
-import {useRouter} from "next/router";
-import { useContext } from "react";
-import { LangContext } from "../../../pages/_app";
+import {useContext} from "react";
+import {LangContext} from "../../../pages/_app";
+import {IReasonCard} from "../../Types";
 import {lang} from "../Navbar/Navbar"
+import Typo from "../Typography/Typo";
 
-const ReasonCard = ({className}:any) => {
-    const router = useRouter()
+const ReasonCard = ({className, title, text,img} : IReasonCard) => {
     const {l} = useContext(LangContext)
 
     return (
         <Box
-        className={`z${className}`}
+            className={`z${className}`}
             sx={{
-                margin:'.5em',
+            margin: '.5em',
             minHeight: {
                 xs: '100px',
                 sm: '120px'
@@ -22,31 +22,36 @@ const ReasonCard = ({className}:any) => {
             ':hover': {
                 background: '#8080803b'
             },
-            border : '1px solid #80808036',
+            border: '1px solid #80808036',
             borderRadius: '6px',
+flexDirection: lang('row', 'row-reverse', l),
             width: {
                 xs: '100%',
                 sm: '90%',
-                md : '40%',
+                md: '40%',
                 lg: '45%'
-            }
-            ,padding:'1em',
-            display :'flex'
+            },
+            padding: '1em',
+            display: 'flex'
         }}>
-            <Box className='reason-icon' >
-                <img src="https://www.svgrepo.com/show/428104/browser.svg" alt="" />
+            <Box className='reason-icon'>
+                <img src={img} alt="Reason Icon"/>
             </Box>
-            <Box>
-                <Typography sx={{color:'#2f2f2f',pb:'.25em',fontSize:'2em'}}>
-                    {lang('Title hello', 'اسم', l)}
-                </Typography>
-                <Typography
+            <Box sx={{textAlign:lang('left','right',l),width:'95%'}}>
+
+                <Typo
+                    sx={{
+                    color: '#2f2f2f',
+                    pb: '.25em',
+                    fontSize: '2em'
+                }}
+                    en={title.en}
+                    ar={title.ar}/>
+
+                <Typo
                     sx={{
                     alignItems: 'center',
-                    width: {
-                        xs: '100%',
-                        md: '95%'
-                    },
+                    justifyContent:lang('left','right',l),
                     display: 'flex',
                     color: '#000000b8',
                     fontWeight: '400',
@@ -55,11 +60,10 @@ const ReasonCard = ({className}:any) => {
                         sm: '1em',
                         lg: '1.2em'
                     }
-                }}>
-                    {lang('  Web design? web development? doesnt matter! Get your effective website today f' +
-                            'or a price of a t-shirt.',
-                    'تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا', `${l}`)}
-                </Typography>
+                }}
+                    en={text.en}
+                    ar={text.ar}/>
+
             </Box>
         </Box>
     )
