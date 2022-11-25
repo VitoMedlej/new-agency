@@ -9,14 +9,16 @@ interface ITypo {
     ar?: string;
     className ?: string;
     sx ?: any
+    onClick ?: () => void;
 
 }
-const Typo = ({en, ar,sx,className} : ITypo) => {
+const Typo = ({en, ar,sx,onClick,className} : ITypo) => {
     const {l} = useContext(LangContext)
     
     
     return (
         <Typography 
+        onClick={()=> onClick ? onClick() : null}
         sx={{
             ...sx
         }}
@@ -25,7 +27,6 @@ const Typo = ({en, ar,sx,className} : ITypo) => {
                 ? lang(en, ar, l)
                 : en
 }
-{/* https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-8789581.jpg */}
         </Typography>
     )
 }

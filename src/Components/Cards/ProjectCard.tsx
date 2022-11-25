@@ -13,7 +13,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
     
     return (
         <Box
-        className={className}
+        className={`${className} PC`}
             sx={{
             ...sx,
             width: {
@@ -30,8 +30,8 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
         }}>
             <img
                 className='img'
-                src="https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-8789581.jpg"
-                alt=""/>
+                src={data.img}
+                alt="Project Image"/>
             <Typography
                 sx={{
                 fontSize: '1.2em',
@@ -40,7 +40,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
             }}>
                 {data.title}
             </Typography>
-            <a href='https://github.com/VitoMedlej/new-agency'>
+            <a href={data.href}>
             {data.href}
 
             </a>

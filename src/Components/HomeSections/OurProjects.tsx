@@ -9,60 +9,23 @@ import { LangContext } from '../../../pages/_app'
 
 const projects = [
     {
-        title: 'THE V214ITOZ',
-
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
+        title: 'Ecommerce Web App',
+        img: 'https://res.cloudinary.com/dwcu3wcol/image/upload/v1658233071/photo-1517292987719-0369a794ec0f_qexfcf.jpg',
+        href: 'https://elvito-property.netlify.app/'
     }, {
-        title: 'THE VI124TOZ',
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
+        title: 'Real Estate Web App',
+        img: 'https://res.cloudinary.com/dwcu3wcol/image/upload/v1658232753/photo-1588702547923-7093a6c3ba33_nxjka5.jpg',
+        href: 'https://elvito-property.netlify.app/'
     }, {
-        title: 'THE VI124TOZ',
+        title: 'Travel Guide website',
         sx: {
             display: {
                 xs: 'none',
                 md: 'block'
             }
         },
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
-    }, {
-        title: 'THE 124V214ITOZ',
-        sx: {
-            display: {
-                xs: 'none',
-                md: 'block'
-            }
-        },
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
-    }, {
-        title: 'THE V124124ITOZ',
-        sx: {
-            display: {
-                xs: 'none',
-                lg: 'block'
-            }
-        },
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
-    }, {
-        title: 'THE 125125125tq',
-        sx: {
-            display: {
-                xs: 'none',
-                lg: 'block'
-            }
-        },
-        img: 'https://www.creative4all.com/uploads/portfolio/thumbs/small_ezzeddine.com-878958' +
-                '1.jpg',
-        href: 'https://home.com'
+        img: 'https://res.cloudinary.com/dwcu3wcol/image/upload/v1661587010/New_Project_byfwqi.jpg',
+        href: 'https://elvito-planet.netlify.app/'
     }
 ]
 const OurProjects = () => {
@@ -124,14 +87,15 @@ const OurProjects = () => {
             <Box className='tt01' sx={{
                 px: '1em'
             }}>
-                <Typo className='h1' en='Our Latest Work' ar='اخر مشاريعي اتاا'/>
+                <Typo className='h1' en='Our Latest Succesful Projects' ar=' مشاريعنا الناجحة'/>
                 <Typo
                     sx={{
+                    pt:'.15em',
                     fontSize: '1.5em',
                     color: '#000000b8'
                 }}
-                    en='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
-                    ar='خرا خؤا شلنصف حلحشسح شيلةصض صضحخبن نبشر لشنؤ؟'/>
+                    en='We have the experience and the ability to turn ideas into success'
+                    ar='لدينا الخبرة والقدرة على تحويل الافكار الى انجازات مزهرة'/>
 
             </Box>
             <Box
@@ -145,7 +109,8 @@ const OurProjects = () => {
 
                 {projects.map((project, idx) => {
                     return <ProjectCard 
-                    className={`p${idx}`}
+                    className={`p${idx}`
+                }
                     sx={project.sx} key={project.title} data={projects[idx]}/>
                 })
 }
@@ -153,12 +118,13 @@ const OurProjects = () => {
 
             </Box>
                 <Button
+                onClick={ ()=> gsap.to(window, {duration:.7,scrollTo:'#contact'})}
                     className='btn b1'
                     sx={{
                     mt: '2em',
                     mb: '10em'
                 }}>
-                    {lang('Show More', ' مشاريعنا', `${l}`)}
+                    {lang('Get a Website', ' احصل على موقعك ', `${l}`)}
                 </Button>
         </Box>
     )

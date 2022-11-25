@@ -5,22 +5,57 @@ import ReasonCard from '../Cards/ReasonCard';
 import {lang} from '../Navbar/Navbar';
 import Typo from '../Typography/Typo';
 import gsap from 'gsap';
-import { LangContext } from '../../../pages/_app';
-
-
+import {LangContext} from '../../../pages/_app';
 
 const rsns = [
     {
-        img : 'https://www.svgrepo.com/show/367414/cred.svg',
-        title : {en:'Credibility',ar:"الثقة"}
-        ,text : {en:'Having a website proves to customers that you are a real business.'
-              , ar : ' الموقع بيعطي الناس احساس بمصداقية تجارتك وثقة فيك'
+        img: 'https://www.svgrepo.com/show/429960/people-support-avatar.svg',
+        title: {
+            en: 'Credibility',
+            ar: "الثقة"
+        },
+        text: {
+            en: 'Having a website proves to customers that you are a real business.',
+            ar: ' الموقع يعطي الناس احساس بمصداقية تجارتك وثقة فيك '
+        }
+    }, {
+        img: 'https://www.svgrepo.com/show/38099/brand.svg',
+        title: {
+            en: 'Brand',
+            ar: "الماركة"
+        },
+        text: {
+            en: 'It represents you and what you stand for, increasing the chances of your custome' +
+                    'rs buying from you.',
+            ar: '    يمثل ما من انت وما تقوم به مما يزيد فرصة شراء الناس منك'
+        }
+    },
+    {
+        img: 'https://www.svgrepo.com/show/233933/online-marketing-advertising.svg',
+        title: {
+            en: 'Digital Marketing',
+            ar: "تسويق الكتروني"
+        },
+        text: {
+            en: 'Having a website allows you to reach new customers in addition to local ones.  ',
+            ar: '    الموقع الالكتروني يساهم في ايجادك عملاء جدد بالاضافة الى عملاء محليين'
+        }
+    },
+    {
+        img: 'https://www.svgrepo.com/show/280934/web-site.svg',
+        title: {
+            en: 'Showcase Services/Products',
+            ar: "عرض بضاعة وخدمات"
+        },
+        text: {
+            en: 'Displaying important information about your products and services in attractive ways.',
+            ar: 'عرض ما تقدمه من خدمات وبضاعة على الانترنت بطريقة ملفتة للانتباه'
+        }
     }
-    }
+
 ]
 const Reasons = () => {
     const {l} = useContext(LangContext)
-
 
     useEffect(() => {
 
@@ -125,7 +160,10 @@ const Reasons = () => {
                         }}/>
 
                         <Button
-                          onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
+                            onClick={() => gsap.to(window, {
+                            duration: .7,
+                            scrollTo: '#contact'
+                        })}
                             sx={{
                             mt: {
                                 md: '1em'
@@ -159,7 +197,8 @@ const Reasons = () => {
                             lg: '1.5em'
                         }
                     }}>
-                        {lang('Having a high quality website is crucial for any business that aims to get clients and generate more revenue.',
+                        {lang('Having a high quality website is crucial for any business that aims to get clien' +
+                                'ts and generate more revenue.',
                         '.اذا كان هدفك تجيب ذباين وتزيد الارباح يعني بدون شك لازمك موقع جودته عالية', `${l}`)}
                     </Typography>
                     <Button
@@ -173,7 +212,10 @@ const Reasons = () => {
                             md: 'none'
                         }
                     }}
-                    onClick={()=>gsap.to(window, {duration:.7,scrollTo:'#contact'})}
+                        onClick={() => gsap.to(window, {
+                        duration: .7,
+                        scrollTo: '#contact'
+                    })}
                         className='btn b1 tt2'>{lang('Our Services', ' خدماتنا', `${l}`)}</Button>
 
                 </Box>
@@ -183,11 +225,16 @@ const Reasons = () => {
                     display: 'flex',
                     flexWrap: 'wrap',
                     flexDirection: 'row',
-                    justifyContent: lang('left','right',l)
+                    justifyContent: lang('left', 'right', l)
                 }}>
-                    {rsns.map((reason,idx:number) => {
+                    {rsns.map((reason, idx : number) => {
 
-                        return <ReasonCard key={reason.title.en} title={reason.title} img={reason.img} text={reason.text} className={idx}/>
+                        return <ReasonCard
+                            key={reason.title.en}
+                            title={reason.title}
+                            img={reason.img}
+                            text={reason.text}
+                            className={idx}/>
                     })}
                 </Box>
             </Box>

@@ -44,10 +44,14 @@ $trans : all .5s ease;
    border:1px solid transparent;
     border-radius: 0;
 }
+.PC {
+    img {
+        height:235px;
+    }
+}
 .b1 {
     color : white;
     border:1px solid $clr;
-
     background:$clr;
     &:hover {
         color : $clr;
@@ -56,23 +60,15 @@ $trans : all .5s ease;
 .b2 {
     color : $clr;
     border-color: $clr;
-    
 }
 .img {
     width : 100%;
     height: 100%;
     object-fit: cover;
 }
-// .about-img {
-//     &:hover  {
-//         div {
-//             width : none;
-//         }
-//     }
-// }
+
 .close-btn{
     svg {
-
         transition: all .2s ease-in; 
     }
 }

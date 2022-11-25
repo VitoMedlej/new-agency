@@ -20,7 +20,8 @@ const Hero = () => {
         tl.fromTo('.btns ', {opacity : 0,x:'-2'},{x:0,opacity:1,stagger:.3})
     },[])
     return (
-        <Box sx={{
+        <Box
+        id='hero' sx={{
             position: 'relative'
         }}>
 
@@ -62,7 +63,7 @@ const Hero = () => {
                     </Typography>
                     <Typo
                     className='t2'
-                        en='The most affordable web development agency in lebanon. Get a full website for your business for the price of a T-shirt within a week!'
+                        en='The most affordable web development agency in lebanon. Get a full website for your business for the price of a pizza within a week!'
                         ar=' اوفر شركة تطوير وب سايت في لبنان احصل على موقع\متجر الكتروني لشغلك بسعر بسيط خلال اسبوع وبس ' 
                         sx={{
                         opacity:0,

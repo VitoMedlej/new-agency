@@ -4,10 +4,11 @@ import { useContext } from 'react'
 import { LangContext } from '../../../pages/_app'
 import { lang } from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
+import gsap from 'gsap';
 
 const HeadSection = () => {
     const {l} = useContext(LangContext)
-
+    const router = useRouter();
   return (
     <Box sx={{
         position: 'relative',
@@ -46,8 +47,8 @@ const HeadSection = () => {
                         xl: '5.5em'
                     }
                 }}
-                    en='OUR PRICES ARE THE'
-                    ar='تصمبم ويب؟ تطوبر لاننا '/>
+                    en='Low budget? Worry not!'
+                    ar=' ميزانية ضيقة؟ لا تقلق  '/>
 
                 <Typo
                     sx={{
@@ -61,8 +62,8 @@ const HeadSection = () => {
                         lg: '1.5em'
                     }
                 }}
-                    en=' Web design? web development? doesnt matter! Get your effective website today for a price of a t-shirt.'
-                    ar='تصمبم ويب؟ تطوبر ويب؟ لايهم لاننا قادرين على تطوير كل ما تريد بسعر بيدزا'/>
+                    en='Having a website is priority, and it should not cost $300. Thats why we are here to make your life easier. '
+                    ar='امتلاك موقع الكتروني هو من الاساسيات, و و ولا يجب ان تكلفك ٣٠٠ دولار, لذالك نحن هنا لنسهل حياتك'/>
 
                 <Box
                     sx={{
@@ -73,9 +74,11 @@ const HeadSection = () => {
                     justifyContent: 'center'
                 }}>
                     <Button 
+                    onClick={()=>{router.push('/');gsap.to(window, {duration:.7,scrollTo:'#contact'})}}
                     sx={{color:'#6000a9 !important',background:'white !important'}}
                     className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
                     <Button 
+                    onClick={()=>router.push('/')}
                     sx={{
                         border: '1px solid white !important',
                         color: 'white !important',

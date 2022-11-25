@@ -5,13 +5,16 @@ import Dots from '../Desgin/Dots'
 import {lang} from '../Navbar/Navbar'
 import Typo from '../Typography/Typo'
 import emailjs from '@emailjs/browser';
-import { LangContext } from '../../../pages/_app'
-
+import {LangContext} from '../../../pages/_app'
 
 const contacts = [
-    {title : {en:'Email',ar : 'ايميل'}
+    {
+        title: {
+            en: 'Email',
+            ar: 'ايميل'
+        }
 
-}
+    }
 ]
 const Contact = () => {
     const form = useRef();
@@ -19,7 +22,7 @@ const Contact = () => {
         setDetails] = useState({status: 0, error: ''})
     const [email,
         setEmail] = useState('')
-  
+
     const {l} = useContext(LangContext)
 
     const sendEmail = async(e : any) => {
@@ -61,21 +64,23 @@ const Contact = () => {
             },
             position: 'relative'
         }}>
-              <Dots
-                        sx={{
-                        top: '-23%',
-                        left: '-5%',
-                        display: {
-                            xs: 'block',
-                            md: 'none'
-                        }
-                    }}
-                        color='#6000a9'/>
+            <Dots
+                sx={{
+                top: '-23%',
+                left: '-5%',
+                display: {
+                    xs: 'block',
+                    md: 'none'
+                }
+            }}
+                color='#6000a9'/>
             <Box
-            
                 sx={{
                 display: 'flex',
-                flexDirection:{xs:'column-reverse', md:lang('row-reverse', 'row', l)},
+                flexDirection: {
+                    xs: 'column-reverse',
+                    md: lang('row-reverse', 'row', l)
+                },
                 justifyContent: {
                     xs: 'center',
                     md: 'space-between'
@@ -86,8 +91,9 @@ const Contact = () => {
                 <Box
                     sx={{
                     position: 'relative',
-                    width: {md:'57%'},
-                    
+                    width: {
+                        md: '57%'
+                    }
                 }}>
                     <Dots
                         sx={{
@@ -99,25 +105,70 @@ const Contact = () => {
                         }
                     }}
                         color='#6000a9'/>
-                <Box
-                sx={{display: {
-                    xs: 'none',
-                    md: 'block'
-                }}}
-                >
+                    <Box
+                        sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'block'
+                        }
+                    }}>
 
-                    <img
-                        className='img'
-                        src="https://images.pexels.com/photos/7792770/pexels-photo-7792770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""/>
-                        </Box>
-                    <Box className='mw' sx={{justifyContent:'center',mt:'1.5em'}}>
-                        
-                    <Box sx={{display:'flex',gap:'.5em'}}>
-                        <Typo en='Email:' sx={{fontWeight:'600'}}/>
-                        <Typo en='simplebeirutweb@gmail.com' />
+                        <img
+                            className='img'
+                            src="https://images.pexels.com/photos/7792770/pexels-photo-7792770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt=""/>
                     </Box>
-                 
+                    <Box
+                        className='mw'
+                        sx={{
+                        display: 'flex',
+                        gap: '1em',
+                        flexWrap: 'wrap',
+                        justifyContent: {
+                            xs: 'center',
+                            sm: 'left'
+                        },
+                        textAlign: 'center',
+                        pt: '1.5em'
+                    }}>
+
+                        <Box
+                            sx={{
+                            display: 'flex',
+                            gap: '.5em'
+                        }}>
+                            <Typo
+                                en='Email:'
+                                sx={{
+                                fontWeight: '600'
+                            }}/>
+                            <Typo en='simplebeirutweb@gmail.com'/>
+                        </Box>
+                        <Box
+                            sx={{
+                            display: 'flex',
+                            gap: '.5em'
+                        }}>
+                            <Typo
+                                en='Phone:'
+                                sx={{
+                                fontWeight: '600'
+                            }}/>
+                            <Typo en='+961 81/826445'/>
+                        </Box>
+                        <Box
+                            sx={{
+                            display: 'flex',
+                            gap: '.5em'
+                        }}>
+                            <Typo
+                                en='Location:'
+                                sx={{
+                                fontWeight: '600'
+                            }}/>
+                            <Typo en='Lebanon/Beirut '/>
+                        </Box>
+
                     </Box>
                 </Box>
                 <Box
@@ -128,7 +179,6 @@ const Contact = () => {
                         xs: 'center',
                         md: lang('baseline', 'end', l)
                     },
-                    // padding: '1em',
                     width: {
                         xs: '100%',
                         md: '43%'
@@ -143,14 +193,18 @@ const Contact = () => {
                         color: '#000000b8',
                         pt: '.25em'
                     }}
-                        en='contact us now bitch or else imma kill you'
-                        ar='  تواصل معنا الان والا قتلتك يا بيتش هاها'/>
+                        en='Send us a message and we will respond to you within an hour.'
+                        ar='ارسل لنا رسالة وسوف نرد عليك في غضون ساعة'/>
 
                     <Typo
                         en={details.error}
                         sx={{
-                        color:  details.status === 200 ? 'white' : ' red',
-                        background: details.status === 200 ? '#238c23' : ' pink',
+                        color: details.status === 200
+                            ? 'white'
+                            : ' red',
+                        background: details.status === 200
+                            ? '#238c23'
+                            : ' pink',
                         width: '100%',
                         textAlign: 'center',
                         mt: '1em',
@@ -216,7 +270,7 @@ const Contact = () => {
                             width: '100%'
                         }}>
                             <Button type='submit' className='btn b1'>
-                                {lang('Submit', ' مشاريعنا', `${l}`)}
+                                {lang('Submit', ' ارسل', `${l}`)}
                             </Button>
 
                         </Box>

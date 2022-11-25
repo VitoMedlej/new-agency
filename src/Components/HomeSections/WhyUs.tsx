@@ -7,47 +7,49 @@ import Typo from '../Typography/Typo';
 const Reasons = [
     {
         title: {
-            en: 'The Cheapest',
-            ar: 'الارخص'
+            en: '1-The Cheapest',
+            ar: '١-الارخص'
         },
         text: {
-            en: 'lorem the fuckeig fuocok fasf',
-            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
+            en: 'Cheapest Web Agency in the entire Middle East',
+            ar: 'ارخص وكالة ويب في الشرق الاوسط'
         },
-        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
+        img: 'https://img.freepik.com/free-photo/billie-dollar-money-background_1150-749.jpg?t=st=1669372241~exp=1669372841~hmac=cc1852b0187ab69bffe5632aaf307373ecb2f8e885a5529794011b9290bd0782'
     }, {
         title: {
-            en: 'The Cheapest',
-            ar: 'الارخص'
+            en: '2-Satisfying results',
+            ar: '٢-نتيجة مرضية'
         },
         text: {
-            en: 'lorem the fuckeig fuocok fasf',
-            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
+            en: 'Pay if and only if you are satisfied with the website.',
+            ar: 'ادفع فقط اذا اعجبك الموقع '
         },
-        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
+        img: `https://img.freepik.com/free-photo/tablet-with-annual-report_1098-3459.jpg?w=826&t=st=1669372466~exp=1669373066~hmac=0acc249034ee7d20a8e4b0ca294a23b5b8387c697e7e83e35d87a78cb8c52eaa`
     }, {
         title: {
-            en: 'The Cheapest',
-            ar: 'الارخص'
+            en: '3-Fast Service ',
+            ar: '٣-اسرع خدمة'
         },
         text: {
-            en: 'lorem the fuckeig fuocok fasf',
-            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
+            en: 'Small company means you are served instantly. ',
+            ar: 'كوننا شركة صغيرة يعني خدمتك بتكون في نفس الوقت'
         },
-        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png'
+        img: 'https://img.freepik.com/premium-photo/businessman-rocket-mixed-media_641298-6645.jpg?w=826'
     }, {
-        img: 'https://softweb.co.in/wp-content/uploads/2022/10/pace-new.png',
+        img: 'https://img.freepik.com/premium-photo/headset-with-blurred-call-center-employee-hand-working-operation-room_42708-612.jpg?w=826',
         title: {
-            en: 'The Cheapest',
-            ar: 'الارخص'
+            en: '4- Permanet Support',
+            ar: '٤-خدمة زبئن دائما'
         },
         text: {
-            en: 'lorem the fuckeig fuocok fasf',
-            ar: 'بشسب شسبش لضفتخ -ضصنل شجسصن لج جيح'
+            en: '24/7 free support for a year for our beloved clients. ',
+            ar: '٢٤\٧ خدمة ودعم لمدة سنة كاملة مجانا'
         }
     }
 ]
 const WhyUs = () => {
+    const router = useRouter();
+    const {l} = router.query;
     return (
         <Box
             sx={{
@@ -73,9 +75,10 @@ const WhyUs = () => {
                     color: 'white'
                 }}/>
                 <Typo
-                    en='this is some random ass text, dw about it nigga'
-                    ar='ما تخترن تخترن تخترن تخترن تخترن تخترن'
+                    en='Few of many reasons to choose us over other web agencies.'
+                    ar='بعض الاسباب لما عليك اختيارنا بدل الوكالات الاخرى'
                     sx={{
+                    pt:'.15em',
                     color: '#c2c2c2'
                 }}/>
 
@@ -100,6 +103,7 @@ const WhyUs = () => {
                 display: 'flex',
                 background: 'white',
                 justifyContent: 'space-around',
+                flexDirection : lang('row', 'row-reverse',l),
                 borderRadius: "9px"
             }}>
 
@@ -114,7 +118,7 @@ const WhyUs = () => {
                             md: '21%'
                         },
                         padding: '.75em',
-                        height: '100px',
+                        // height: '100px',
                         background: 'white',
                         position: 'relative',
                         color: 'white',
@@ -125,14 +129,15 @@ const WhyUs = () => {
                         <Box
                             className='absolute'
                             sx={{
-                            background: '#00000070',
+                            background: '#0000009e',
                             zIndex: '-1'
                         }}></Box>
 
                         <Typo
                             sx={{
                             fontSize: '1.5em',
-                            fontWeight: '700'
+                            fontWeight: '700',
+                            mb:'.25em',
                         }}
                             en={reason.title.en}
                             ar={reason.title.ar}/>

@@ -46,6 +46,10 @@ body {
   border-radius: 0;
 }
 
+.PC img {
+  height: 235px;
+}
+
 .b1 {
   color: white;
   border: 1px solid #6000a9;

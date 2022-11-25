@@ -9,56 +9,75 @@ import Typo from '../Typography/Typo'
 const plans = [
     {
         title: {
-            en: 'Basic Plan',
-            ar: 'الخطة الأساسية '
+            en: 'Basic Plan (No hosting)',
+            ar: 'الخطة الأساسية (بدون استضافة) '
         },
         isFeatured: false,
         price: {
             en: 19.99,
-            ar: 22
+            ar: '١٩.٩٩'
         },
         description: {
-            en: 'Best for starters',
-            ar: 'جيد للنوبس'
+            en: 'Best for small business',
+            ar: 'ممتاز للشركات الصغيرة'
         },
 
         planFeatures: [
             {
                 en: '2 pages',
-                ar: '2 صفحات'
+                ar: '٢ صفحات'
             }, {
-                en: '2 month support',
+                en: '2 month maintenance',
                 ar: 'شهرين دعم متواصل'
             }, {
-                en: '2 month support',
-                ar: 'شهرين دعم متواصل'
+                en: 'Takes time to complete',
+                ar: 'يستهلك وقت ليجهز'
+            },
+            {
+                en: 'Cost-Effective, low-risk investment',
+                ar: 'ستثمار فعال من حيث التكلفة ومنخفض المخاطر'
+            },
+            {
+                en: 'Simple but effective desgin',
+                ar: `تصميم بسيط ولكنه فعال`
             }
 
         ]
     }, {
         title: {
-            en: 'Pro Plan',
+            en: 'Advanced Plan',
             ar: 'الخطة المتطورة '
         },
         isFeatured: true,
         description: {
             en: 'Best for professionals',
-            ar: 'مقلبشل شسلهخشت'
+            ar: 'مماثل للمحترفين'
         },
         price: {
             en: 39.99,
-            ar: 22
+            ar: '٣٩.٩٩'
         },
         planFeatures: [
             {
-                en: '10 pages',
-                ar: '10 صفحات'
+                en: '6 pages',
+                ar: '٦ صفحات'
             }, {
-                en: '2 month support',
-                ar: 'شهرين دعم متواصل'
+                en: '6 month support',
+                ar: ' دعم وصيانة لمدة ٦ اشهر'
             }, {
-                en: '2 month support',
-                ar: 'شهرين دعم متواصل'
+                en: 'Long life-span website',
+                ar: 'موقع طويل العمر'
+            },{
+                en: 'Enhanced design',
+                ar: 'تصميم حديث'
+            }
+            ,{
+                en : "Full content control",
+                ar : 'تحكم كامل بالمحتوى'
+            },
+            {
+                en : "High quality code and customization",
+                ar : 'كود عالي الجودة والتخصيص'
             }
 
         ]
@@ -69,24 +88,42 @@ const plans = [
         },
         isFeatured: false,
         description: {
-            en: 'Fully customized plan ',
-            ar: 'فات اسس نيغا'
+            en: 'Fully customized plan',
+            ar: 'الافضل لذيادة الارباح'
         },
         price: {
-            en: 59.99,
-            ar: 22
+            en: 79.99,
+            ar: '٧٩.٩٩'
         },
         planFeatures: [
             {
-                en: '200 pages',
-                ar: '200 صفحات'
-            }, {
-                en: '2 month support',
-                ar: 'شهرين دعم متواصل'
-            }, {
-                en: '2 month support',
-                ar: 'شهرين دعم متواصل'
+                en: 'Everything in Advanced plan ',
+                ar: 'كل ما يوجد في الخطة المتطورة'
             }
+            ,
+            {
+                en: '15 pages',
+                ar: '١٥ صفحة'
+            }, {
+                en: '12 month support',
+                ar: 'دعم لمدة 12 شهرًا'
+            }, {
+                en: 'Enterprise-level marketing data and analytics',
+                ar: 'تحليلات وبيانات التسويق على مستوى المؤسسة'
+            }
+            ,
+            {
+                en : 'Complete control of design',
+                ar : 'تحكم كامل في التصميم'
+            },
+            {
+                en : 'Full custom functionality',
+                ar : 'وظائف مخصصة كاملة'
+            },
+            {
+                en : "Hosting + Domain + SSL",
+                ar : 'استضافة + نطاق + طبقة المقابس الآمنة'
+            },
 
         ]
     }

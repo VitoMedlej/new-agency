@@ -3,6 +3,7 @@ import {Box, Typography, Divider, Grid} from '@mui/material';
 
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Typo from '../Typography/Typo';
 function Copyright() {
     return (
 <>
@@ -17,8 +18,8 @@ function Copyright() {
 
             <Typography variant='h1' fontSize='1em'>
                 {'Copyright © '}
-                <Link color="inherit" href="/">
-                    elvito-portfolio.netlify.app
+                <Link color="inherit" href="https://simplebeirutweb.netlify.app/">
+                https://simplebeirutweb.netlify.app/
                 </Link>{' '} {new Date().getFullYear()}
                 {'.'}
             </Typography>
@@ -61,38 +62,57 @@ function Footer() {
                     maxWidth='lg'
                     container>
                     <Grid item xs={12} sm={6} md={5}>
-                        <Typography variant='h1' fontSize='1.4em' fontWeight='400'>About</Typography>
+                        <Typo  sx={{fontSize:'1.4em', fontWeight:'400'}} en='About' ar='من نكون'></Typo>
 
                         <Box sx={styles}>
-                            <Typography color='black' variant='h3' fontSize='1em'>
-                              
-                            We are a Web Development Agency and we are helping Businesses to grow. We provide a wide array of Services and quality work for the price of a pizza , Feel Free to Contact us Anytime.
-                            </Typography>
+                            <Typo
+                            sx={{color:'black'}}
+                            en={`
+                                                        We are a web and software development agency, we are helping lebanese businesses to grow. We provide a wide array of services and quality work for all budgets making us the most affordable website development company in lebanon and the middle east.
+
+
+                            `}
+                            ar={`
+                            نحن وكالة لتطوير الويب والبرمجيات ، نحن نساعد الشركات اللبنانية على النمو. نحن نقدم مجموعة واسعة من الخدمات والعمل الجيد لجميع الميزانيات مما يجعلنا شركة تطوير مواقع الويب الاقل تكلفة في لبنان والشرق الأوسط.                            
+                            `}
+                            />
                         </Box>
 
                     </Grid>
                     <Grid item xs={12} sm={4} md={3}>
-                        <Typography variant='h1' fontSize='1.4em' fontWeight='400'>Links</Typography>
+                        <Typo en='Links' ar='الروابط'  sx={{fontSize:'1.4em',fontWeight:'400'}}/>
 
                         <Box className='link' sx={styles}>
-                            <Typography 
+                            <Typo 
+                            en='Home'
+                            ar='الرئيسية'
                             className='FooterLink'
                             onClick={()=>{router.push('/'); gsap.to(window, {duration: .8, scrollTo: `#hero`})}}
-                            >Home</Typography>
-                            <Link href='/contact'>Contact</Link>
+                            />
+                            <Typo
+                            className='FooterLink'
+                            onClick={()=>{router.push('/'); gsap.to(window, {duration: .5, scrollTo: `#contact`})}}
+                            
+                            en='Contact' ar='تواصل'/>
                          
-                            <Typography 
+                            <Typo en='About' ar='من نحن' 
                             className='FooterLink'
                             onClick={()=>{router.push('/'); gsap.to(window, {duration: .5, scrollTo: `#about`})}}
-                            >About</Typography>
+                            />
                         </Box>
 
                     </Grid>
                     <Grid item xs={12} sm={3} md={3}>
-                        <Typography variant='h1' fontSize='1.4em' fontWeight='400'>Contact</Typography>
+                        <Typo  sx={{fontSize:'1.4em', fontWeight:'400'}} en='Contact' ar='التواصل'></Typo>
                         <Box className='links' sx={styles}>
-                            <a target='_blank' rel="noreferrer" href='https://github.com/VitoMedlej'>Github</a>
-                            <Typography variant='h1' fontSize='1em'>vito.medlej@gmail.com</Typography>
+                            <a target='_blank' rel="noreferrer" href='https://github.com/VitoMedlej'>
+
+                                <Typo
+                                en='Facebook'
+                                ar='فيسبوك'
+                                />
+                            </a>
+                            <Typography variant='h1' fontSize='1em'>simplebeirutweb@gmail.com</Typography>
                             <Typography variant='h1' fontSize='1em'>Lebanon/beirut</Typography>
                             <Typography variant='h1' fontSize='1em'>+961/81826445</Typography>
                         </Box>
