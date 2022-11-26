@@ -19,16 +19,16 @@ const links =
         href: '/'
     }, {
         title: {en:'ABOUT',ar:'من نحن'},
-        href: '#about'
+        href: '/?s=about'
     }, {
         title: {en:'PORTFOLIO',ar:'معرض'},
-        href: '#portfolio'
+        href: '/?s=portfolio'
     }, {
         title: {en:'PRICING',ar:'السعر'},
         href: '/pricing'
     }, {
         title: {en:'CONTACT',ar:'تواصل معنا'},
-        href: '#contact'
+        href: '/?s=contact'
     }
 ]
 const Menu = ({animateMenu } : INavbar) => {

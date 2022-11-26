@@ -13,8 +13,7 @@ const HeadSection = () => {
     <Box sx={{
         position: 'relative',
         background : '#6000a9',
-        color : 'white',
-        
+        color : 'white',  
     }}>
 
         <Box
@@ -74,11 +73,11 @@ const HeadSection = () => {
                     justifyContent: 'center'
                 }}>
                     <Button 
-                    onClick={()=>{router.push('/');gsap.to(window, {duration:.7,scrollTo:'#contact'})}}
+                    onClick={()=>{router.push('/?s=contact')}}
                     sx={{color:'#6000a9 !important',background:'white !important'}}
                     className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
                     <Button 
-                    onClick={()=>router.push('/')}
+                    onClick={()=>router.push('/?s=portfolio')}
                     sx={{
                         border: '1px solid white !important',
                         color: 'white !important',

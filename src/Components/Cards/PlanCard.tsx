@@ -16,7 +16,7 @@ interface PlanCard {
     description : MultiLang;
 }
 const PlanCard = ({
-    rtl ,
+    rtl,
     price,
     title,
     isFeatured,
@@ -26,6 +26,8 @@ const PlanCard = ({
 :PlanCard) => {
       
         const {l} = useContext(LangContext)
+        const router= useRouter();
+        
     return (
         <Box
             sx={{
@@ -77,7 +79,8 @@ const PlanCard = ({
                 en={`$${price.en}`}
                 ar={`$${price.ar}`}/>
             <Button
-                sx={{
+            onClick={()=>router.push(`/?s=contact&plan=${title.en}`)}
+       sx={{
                 width: '90% !important',
                 mt: '1em',
                 mb: '2em',
