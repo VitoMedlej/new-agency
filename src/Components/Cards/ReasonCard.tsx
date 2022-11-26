@@ -45,8 +45,8 @@ flexDirection: lang('row', 'row-reverse', l),
                     pb: '.25em',
                     fontSize: '2em'
                 }}
-                    en={title.en}
-                    ar={title.ar}/>
+                    en={`${title.en}`}
+                    ar={`${title.ar}`}/>
 
                 <Typo
                     sx={{

@@ -30,7 +30,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
         }}>
             <img
                 className='img'
-                src={data.img}
+                src={`${data.img}`}
                 alt="Project Image"/>
             <Typography
                 sx={{
