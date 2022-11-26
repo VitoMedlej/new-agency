@@ -11,7 +11,7 @@ import gsap from 'gsap';
 
 
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const {s} = router.query;
   useEffect(() => {
@@ -42,4 +42,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
