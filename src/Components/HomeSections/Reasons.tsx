@@ -153,8 +153,8 @@ const Reasons = () => {
                             className='h1 tt0'
                             sx={{
                             fontSize: {
-                                xs: '2.5em',
-                                sm: '3em'
+                                xs: '2.5em !important',
+                                sm: '3em !important'
                             },
                             mb: '.4em'
                         }}/>

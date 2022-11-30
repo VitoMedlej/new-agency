@@ -15,16 +15,16 @@ import { LangContext } from '../../../../pages/_app';
 const links = 
 [
     {
-        title: {en:'HOME',ar:'الرايسية'},
+        title: {en:'HOME',ar:'الرئيسية'},
         href: '/'
     }, {
         title: {en:'ABOUT',ar:'من نحن'},
         href: '/?s=about'
     }, {
-        title: {en:'PORTFOLIO',ar:'معرض'},
+        title: {en:'PORTFOLIO',ar:'مشاريعنا'},
         href: '/?s=portfolio'
     }, {
-        title: {en:'PRICING',ar:'السعر'},
+        title: {en:'PRICING',ar:'الاسعار'},
         href: '/pricing'
     }, {
         title: {en:'CONTACT',ar:'تواصل معنا'},

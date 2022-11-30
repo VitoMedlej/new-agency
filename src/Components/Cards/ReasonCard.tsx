@@ -26,7 +26,7 @@ const ReasonCard = ({className, title, text,img} : IReasonCard) => {
             borderRadius: '6px',
 flexDirection: lang('row', 'row-reverse', l),
             width: {
-                xs: '100%',
+                xs: '95%',
                 sm: '90%',
                 md: '40%',
                 lg: '45%'

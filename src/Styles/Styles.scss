@@ -35,14 +35,13 @@ $trans : all .5s ease;
 }
 .btn {
     // color:black;
-    min-width:168px ;
-    
-    font-weight: 600;
-    padding: .5em 2.5em;
+    min-width:168px !important;
+    font-weight: 600 !important;
+    padding: .5em 2.5em !important;
     transition: $trans;
 
-   border:1px solid transparent;
-    border-radius: 0;
+   border:1px solid transparent !important;
+    border-radius: 0 !important;
 }
 .PC {
     img {
@@ -50,16 +49,17 @@ $trans : all .5s ease;
     }
 }
 .b1 {
-    color : white;
-    border:1px solid $clr;
-    background:$clr;
+    color : white !important;
+    border:1px solid $clr !important;
+    background:$clr !important;
     &:hover {
-        color : $clr;
+    background:white !important;
+    color : $clr !important;
     }
 }
 .b2 {
-    color : $clr;
-    border-color: $clr;
+    color : $clr !important;
+    border-color: $clr !important;
 }
 .img {
     width : 100%;
@@ -142,8 +142,8 @@ $trans : all .5s ease;
     height: 150px;
 }
 .h1 {
-    font-size: 2.5em;
-    font-weight: 700;
+    font-size: 2.5em !important;
+    font-weight: 700 !important;
 }
 .style-box {
     background: white;

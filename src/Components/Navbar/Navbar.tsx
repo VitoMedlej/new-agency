@@ -1,6 +1,6 @@
 import {Box, Button, Typography} from '@mui/material'
 import {INavbar} from '../../Types'
-import {DragHandle} from '@mui/icons-material';
+import DragHandle from '@mui/icons-material/DragHandle';
 import router, { useRouter } from 'next/router';
 import { useContext, useEffect } from 'react';
 import { LangContext } from '../../../pages/_app';
@@ -42,14 +42,18 @@ const Navbar = ({animateMenu} : INavbar) => {
                 sx={{
                     flexDirection : lang('row','row-reverse',l)
                 }} className='center '>
-                    <Button sx={{
+                    <Button
+                    
+                    onClick={()=>{setLanguage(lang('ar','en',l)); 
+                        
+                        router.push(`${router.pathname}?l=` + lang('ar','en',l))}}
+                    
+                    sx={{
                         mx: '1em'
                     }}>
 
                         <Typography 
-                        onClick={()=>{setLanguage(lang('ar','en',l)); 
                         
-                        router.push(`${router.pathname}?l=` + lang('ar','en',l))}}
                         className='cursor' color='black'>
                             {lang('العربية','English',l)}
                         </Typography>

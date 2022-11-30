@@ -59,10 +59,10 @@ const HeadSection = () => {
                         xs: '.9em',
                         sm: '1.3em',
                         lg: '1.5em'
-                    }
+                    },
                 }}
                     en='Having a website is priority, and it should not cost $300. Thats why we are here to make your life easier. '
-                    ar='امتلاك موقع الكتروني هو من الاساسيات, و و ولا يجب ان تكلفك ٣٠٠ دولار, لذالك نحن هنا لنسهل حياتك'/>
+                    ar='امتلاك موقع الكتروني هو من الاساسيات, و ولا يجب ان تكلفك ٣٠٠ دولار, لذالك نحن هنا لنسهل حياتك'/>
 
                 <Box
                     sx={{
@@ -74,15 +74,16 @@ const HeadSection = () => {
                 }}>
                     <Button 
                     onClick={()=>{router.push('/?s=contact')}}
-                    sx={{color:'#6000a9 !important',background:'white !important'}}
-                    className='btn b1'>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
+                    sx={{color:'white !important',border:'1px solid white !important'}}
+                    className='btn '>{lang('GET STARTED', ' البداء', `${l}`)}</Button>
                     <Button 
                     onClick={()=>router.push('/?s=portfolio')}
                     sx={{
+                        color: '#6000a9 !important',
                         border: '1px solid white !important',
-                        color: 'white !important',
+                        background: 'white !important',
                     }}
-                    className='btn b2'>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
+                    className='btn '>{lang('OUR WORK', ' مشاريعنا', `${l}`)}
                     </Button>
                 </Box>
             </Box>

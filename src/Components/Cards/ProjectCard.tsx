@@ -17,6 +17,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
             sx={{
             ...sx,
             width: {
+                xs : '95%',
                 sm: '47%',
                 md : '40%',
                 lg: '30%',
@@ -28,7 +29,7 @@ const ProjectCard = ({sx,className,data}:IProjectCard) => {
             borderRadius: '6px',
             padding: '.25em',
         }}>
-            <img
+            <img 
                 className='img'
                 src={`${data.img}`}
                 alt="Project Image"/>

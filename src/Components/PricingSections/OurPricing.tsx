@@ -1,16 +1,14 @@
-import {Box, Button} from '@mui/material'
-import {useRouter} from 'next/router';
+import {Box} from '@mui/material'
 import React, { useContext } from 'react'
 import { LangContext } from '../../../pages/_app';
 import PlanCard from '../Cards/PlanCard';
 import {lang} from '../Navbar/Navbar';
-import Typo from '../Typography/Typo'
 
 const plans = [
     {
         title: {
-            en: 'Basic Plan (No hosting)',
-            ar: 'الخطة الأساسية (بدون استضافة) '
+            en: 'Basic Plan ',
+            ar: 'الخطة الأساسية '
         },
         isFeatured: false,
         price: {
@@ -74,6 +72,10 @@ const plans = [
             ,{
                 en : "Full content control",
                 ar : 'تحكم كامل بالمحتوى'
+            },
+            {
+                en : 'blazingly fast speed',
+                ar : 'سرعة الموقع خيالية'
             },
             {
                 en : "High quality code and customization",

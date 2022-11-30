@@ -24,7 +24,7 @@ const Reasons = [
             en: 'Pay if and only if you are satisfied with the website.',
             ar: 'ادفع فقط اذا اعجبك الموقع '
         },
-        img: `https://img.freepik.com/free-photo/tablet-with-annual-report_1098-3459.jpg?w=826&t=st=1669372466~exp=1669373066~hmac=0acc249034ee7d20a8e4b0ca294a23b5b8387c697e7e83e35d87a78cb8c52eaa`
+        img: `https://media.istockphoto.com/id/1203886740/photo/customer-service-experience-and-business-satisfaction-survey-man-holding-yellow-speech-bubble.jpg?b=1&s=170667a&w=0&k=20&c=Z3ytmOv7ABeRgRjmlC7V_emIMEoq7SLZi4s9ONJCtBg=`
     }, {
         title: {
             en: '3-Fast Service ',
@@ -92,11 +92,11 @@ const WhyUs = () => {
                     sm: 'translateY(25%)',
                     md: 'translateY(35%)'
                 },
-                width: {
-                    md: '90%'
-                },
+                // width: {
+                //     md: '90%'
+                // },
                 padding: '1em',
-                gap: '1em',
+                // gap: '1em',
                 flexWrap: 'wrap',
                 color: 'black',
                 boxShadow: '1px 1px 3px #00000036',
@@ -114,8 +114,8 @@ const WhyUs = () => {
                         sx={{
                         width: {
                             xs: '40%',
-                            sm: '25%',
-                            md: '21%'
+                            sm: '43%',
+                            md: '23%'
                         },
                         padding: '.75em',
                         // height: '100px',

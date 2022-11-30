@@ -92,7 +92,7 @@ const Contact = () => {
                     sx={{
                     position: 'relative',
                     width: {
-                        md: '57%'
+                        md: '60%' 
                     }
                 }}>
                     <Dots
@@ -175,13 +175,14 @@ const Contact = () => {
                     sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    margin: '0 auto',
                     alignItems: {
                         xs: 'center',
                         md: lang('baseline', 'end', l)
                     },
                     width: {
                         xs: '100%',
-                        md: '43%'
+                        md: '39%'
                     },
                     maxWidth: '500px',
                     borderRadius: '9px',
@@ -230,7 +231,9 @@ const Contact = () => {
                             top: '105%',
                             left: '-8%',
                             display: {
-                                md: 'none`'
+
+                                xs:'none',
+                                md: 'block'
                             }
                         }}
                             color='#02010182'/>
