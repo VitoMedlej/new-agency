@@ -36,7 +36,7 @@ const Navbar = ({animateMenu} : INavbar) => {
                 <Box 
                 onClick={()=>router.push('/')}
                 sx={{width:{xs:'100px',sm:'130px'}}} className='cursor center '>
-                     <img className='img' src="/logo04.JPG" alt="SBW logo" />
+                     <img className='img' src="/logo022.JPG" alt="SBW logo" />
                 </Box>
                 <Box
                 sx={{

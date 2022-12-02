@@ -1,6 +1,5 @@
-import {Box, Button, Drawer, IconButton} from "@mui/material";
 import Head from "next/head";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import Footer from "../Components/Footer/Footer";
 import Menu from "../Components/Navbar/Menu/Menu";
 import Navbar, { lang } from "../Components/Navbar/Navbar";
@@ -33,6 +32,7 @@ const Layout = ({title, children, description} : ILayout) => {
             }
         
         }
+        const desc = lang(description.en,'We are a well experienced team of developers helping small businesses grow exponentially',l)
     return (
 
         <div>
@@ -43,7 +43,7 @@ const Layout = ({title, children, description} : ILayout) => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link
                     rel="shortcut icon"
-                    href="./icon01.PNG"/>
+                    href="https://res.cloudinary.com/dwcu3wcol/image/upload/v1669900311/icoo_yiu32k.png"/>
 
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -52,22 +52,21 @@ const Layout = ({title, children, description} : ILayout) => {
                     rel="stylesheet"/>
                 <meta
                     name="description"
-                    content={`${description || 'Vito Medlej personal portfolio website, A Lebanese web developer an expert in UI' +
-                    '/UX and building complex web applications.'}`}/>
+                    content={`${desc }`}/>
 
                 <meta
                     property="og:title"
-                    content="Vito Medlej Personal Portfolio | Web Developer To Hire"/>
+                    content={`${title || 'Simple Beirut Web | The best and most affordable web agency'}`}/>
 
-                <meta property="og:url" content="https://elvito.netlify.app"/>
+                <meta property="og:url" content="https://simplebeirutweb.netlify.app"/>
 
                 <meta
                     property="og:description"
-                    content="Vito Medlej is a Web Developer based in Lebanon. And this is my personal Portfolio. "/>
+                    content={`${desc}`}/>
 
                 <meta
                     property="og:image"
-                    content="https://res.cloudinary.com/dwcu3wcol/image/upload/v1658929513/log-removebg-preview_fygpsd.png"/>
+                    content="./iconnobg2.jpg"/>
 
             </Head>
             {/* <Drawer
