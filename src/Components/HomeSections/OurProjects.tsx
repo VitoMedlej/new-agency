@@ -30,7 +30,7 @@ const projects = [
 ]
 const OurProjects = () => {
     const {l} = useContext(LangContext)
-
+    const router = useRouter();
     
     useEffect(() => {
 
@@ -118,13 +118,13 @@ const OurProjects = () => {
 
             </Box>
                 <Button
-                onClick={ ()=> gsap.to(window, {duration:.7,scrollTo:'#contact'})}
+                onClick={ ()=> router.push('/pricing')}
                     className='btn b1'
                     sx={{
                     mt: '2em',
                     mb: '10em'
                 }}>
-                    {lang('Get a Website', ' احصل على موقعك ', `${l}`)}
+                    {lang('Our Pricings', ' اسعارنا ', `${l}`)}
                 </Button>
         </Box>
     )

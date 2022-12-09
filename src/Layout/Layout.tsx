@@ -56,13 +56,13 @@ const Layout = ({title, children, description} : ILayout) => {
 
                 <meta
                     property="og:title"
-                    content={`${title || 'Simple Beirut Web | The best and most affordable web agency'}`}/>
+                    content={`${title.en || 'Simple Beirut Web | The best and most affordable web agency'}`}/>
 
                 <meta property="og:url" content="https://simplebeirutweb.netlify.app"/>
 
                 <meta
                     property="og:description"
-                    content={`${desc}`}/>
+                    content={`${description.en}`}/>
 
                 <meta
                     property="og:image"

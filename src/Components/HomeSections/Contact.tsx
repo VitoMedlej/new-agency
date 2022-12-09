@@ -192,7 +192,8 @@ const Contact = () => {
                     <Typo
                         sx={{
                         color: '#000000b8',
-                        pt: '.25em'
+                        pt: '.25em',
+                        px:'.25em'
                     }}
                         en='Send us a message and we will respond to you within an hour.'
                         ar='ارسل لنا رسالة وسوف نرد عليك في غضون ساعة'/>

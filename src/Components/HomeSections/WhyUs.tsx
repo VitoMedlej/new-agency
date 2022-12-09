@@ -117,6 +117,7 @@ const WhyUs = () => {
                             sm: '43%',
                             md: '23%'
                         },
+                        my:'.15em',
                         padding: '.75em',
                         // height: '100px',
                         background: 'white',
