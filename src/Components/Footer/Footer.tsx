@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Typo from '../Typography/Typo';
 function Copyright() {
+ 
     return (
 <>
         <Divider/>
@@ -18,8 +19,8 @@ function Copyright() {
 
             <Typography variant='h1' fontSize='1em'>
                 {'Copyright © '}
-                <Link color="inherit" href="https://simplebeirutweb.netlify.app/">
-                https://simplebeirutweb.netlify.app/
+                <Link color="inherit" href={`${window.location.href || 'https://simplebeirut.onrender.com/'}`}>
+                {window.location.href || 'simplebeirut.onrender.com'}
                 </Link>{' '} {new Date().getFullYear()}
                 {'.'}
             </Typography>
