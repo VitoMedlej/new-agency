@@ -1,4 +1,4 @@
-import {Box, Button, Typography} from '@mui/material'
+import {Box, Button} from '@mui/material'
 import {useRouter} from 'next/router'
 import React, {useContext, useEffect} from 'react'
 import ProjectCard from '../Cards/ProjectCard'
@@ -15,7 +15,7 @@ const projects = [
     }, {
         title: 'Real Estate Web App',
         img: 'https://res.cloudinary.com/dwcu3wcol/image/upload/v1658232753/photo-1588702547923-7093a6c3ba33_nxjka5.jpg',
-        href: 'https://elvito-property.netlify.app/'
+        href: 'https://el-vito.netlify.app/'
     }, {
         title: 'Travel Guide website',
         sx: {
