@@ -45,10 +45,15 @@ const Layout = ({title, children, description} : ILayout) => {
                     rel="shortcut icon"
                     href="https://res.cloudinary.com/dwcu3wcol/image/upload/v1669900311/icoo_yiu32k.png"/>
 
-                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link
                     href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;700;900&display=swap"
+                    rel="stylesheet"/> */}
+                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
                     rel="stylesheet"/>
                 <meta
                     name="description"

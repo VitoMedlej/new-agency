@@ -1,4 +1,5 @@
 import '../src/Styles/Styles.css'
+import '../src/Styles/blog.css'
 import type {AppProps}
 from 'next/app'
 import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
